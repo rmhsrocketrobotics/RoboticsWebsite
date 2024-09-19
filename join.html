@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&family=Epilogue:wght@900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="icon.png">
+<title>ROCKET ROBOTICS | join</title>
+</head>
+<body>
+
+  <ul>
+    <li><a id="mlogo" class="minilogo" href="index.html">ROCKET ROBOTICS</a></li>
+    <li><a id="news" href="news.html">logbook</a></li>
+    <li><a id="join" href="join.html">join</a></li>
+    <li><a id="contact" href="contact.html">contact</a></li>
+    <li><a id="donate" target="_blank" href="https://mcpsmd.schoolcashonline.com/Fee/Details/58441/354/False/True">donate</a></li>
+    <div id="hamburger" class="hamburger" style="display: none;" onclick="toggleMenu()">
+      <div id="b1" class="bar"></div>
+      <div id="b2" class="bar"></div>
+      <div id="b3" class="bar"></div>
+    </div>
+  </ul>
+
+  <!-- hamburger main menu (mobile) --> 
+  <div class="menu-container" id="menu"> 
+    <div id="inhamburger" class="hamburger" onclick="toggleMenu()">
+      <div id="b1" class="bar" style="background-color: #000000;"></div>
+      <div id="b2" class="bar" style="background-color: #000000;"></div>
+      <div id="b3" class="bar" style="background-color: #000000;"></div>
+    </div>
+    <div class="menu-item"><a id="mlogo" style="font-size: 9vw; font-family: 'Epilogue', sans-serif; text-decoration: none; color:black;" href="index.html">ROCKET ROBOTICS</a></div>
+    <div class="menu-item"><a id="news" href="news.html" style="font-family: 'DM Sans', sans-serif; font-size: 8vw; text-decoration: none; color:black;">logbook</a></div>
+    <div class="menu-item"><a id="join" href="join.html" style="font-family: 'DM Sans', sans-serif; font-size: 8vw; text-decoration: none; color:black;">join</a></div>
+    <div class="menu-item"><a id="contact" href="contact.html" style="font-family: 'DM Sans', sans-serif; font-size: 8vw; text-decoration: none; color:black;">contact</a></div>
+    <div class="menu-item"><a id="donate" target="_blank" href="https://mcpsmd.schoolcashonline.com/Fee/Details/58441/354/False/True" style="font-family: 'DM Sans', sans-serif; font-size: 8vw; text-decoration: none; color:black;">donate</a></div>
+  </div> 
+  
+  <script> //change header to mobile version script
+    if (screen.width <= 700) {
+        document.getElementById("news").innerHTML = "";
+        document.getElementById("join").innerHTML = "";
+        document.getElementById("contact").innerHTML = "";
+        document.getElementById("donate").innerHTML = "";
+        document.getElementById("hamburger").style.display = 'block';
+        document.getElementById("mlogo").style.fontSize = "6vw"; 
+    }
+    
+  </script>
+
+
+<script> //hamburger menu script
+  function toggleMenu() {
+    const menu = document.getElementById('menu');
+    menu.classList.toggle('active');
+    document.getElementById('b1').style.color = '#000000';
+    document.getElementById('b2').style.color = '#000000';
+    document.getElementById('b3').style.color = '#000000';
+    
+    // Fade in each menu item one at a time
+    const menuItems = document.querySelectorAll('.menu-item');
+    let delay = 0.1; // Start delay for the first item
+    menuItems.forEach(item => {
+      item.style.transitionDelay = delay + 's';
+      item.style.opacity = menu.classList.contains('active') ? '1' : '0';
+      delay += 0.1; // Increment delay for each item
+    });
+  }
+</script>
+
+    <iframe id="myiframe" src="https://docs.google.com/forms/d/e/1FAIpQLSd7NOsStJkJZtZGWvrIorwDFI7UH2DhrFovYELRW-v6dhiF3g/viewform?usp=sf_link" width="100%" height="1000vw"></iframe>
+    
+</body> 
+</html>

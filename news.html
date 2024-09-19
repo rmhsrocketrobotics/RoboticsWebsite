@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&family=Epilogue:wght@900&display=swap" rel="stylesheet">
+    
+    <link rel="icon" type="image/x-icon" href="icon.png">
+    <link rel="stylesheet" href="styles.css">
+<title>ROCKET ROBOTICS | logbook</title>
+</head>
+<body>
+
+  <ul>
+    <li><a id="mlogo" class="minilogo" href="index.html">ROCKET ROBOTICS</a></li>
+    <li><a id="news" href="news.html">logbook</a></li>
+    <li><a id="join" href="join.html">join</a></li>
+    <li><a id="contact" href="contact.html">contact</a></li>
+    <li><a id="donate" target="_blank" href="https://mcpsmd.schoolcashonline.com/Fee/Details/58441/354/False/True">donate</a></li>
+    <div id="hamburger" class="hamburger" style="display: none;" onclick="toggleMenu()">
+      <div id="b1" class="bar"></div>
+      <div id="b2" class="bar"></div>
+      <div id="b3" class="bar"></div>
+    </div>
+  </ul>
+
+  <!-- hamburger main menu (mobile) --> 
+  <div class="menu-container" id="menu"> 
+    <div id="inhamburger" class="hamburger" onclick="toggleMenu()">
+      <div id="b1" class="bar" style="background-color: #000000;"></div>
+      <div id="b2" class="bar" style="background-color: #000000;"></div>
+      <div id="b3" class="bar" style="background-color: #000000;"></div>
+    </div>
+    <div class="menu-item"><a id="mlogo" style="font-size: 9vw; font-family: 'Epilogue', sans-serif; text-decoration: none; color:black;" href="index.html">ROCKET ROBOTICS</a></div>
+    <div class="menu-item"><a id="news" href="news.html" style="font-family: 'DM Sans', sans-serif; font-size: 8vw; text-decoration: none; color:black;">logbook</a></div>
+    <div class="menu-item"><a id="join" href="join.html" style="font-family: 'DM Sans', sans-serif; font-size: 8vw; text-decoration: none; color:black;">join</a></div>
+    <div class="menu-item"><a id="contact" href="contact.html" style="font-family: 'DM Sans', sans-serif; font-size: 8vw; text-decoration: none; color:black;">contact</a></div>
+    <div class="menu-item"><a id="donate" target="_blank" href="https://mcpsmd.schoolcashonline.com/Fee/Details/58441/354/False/True" style="font-family: 'DM Sans', sans-serif; font-size: 8vw; text-decoration: none; color:black;">donate</a></div>
+  </div> 
+
+  <script> //change header to mobile version script
+    if (screen.width <= 700) {
+        document.getElementById("news").innerHTML = "";
+        document.getElementById("join").innerHTML = "";
+        document.getElementById("contact").innerHTML = "";
+        document.getElementById("donate").innerHTML = "";
+        document.getElementById("hamburger").style.display = 'block';
+        document.getElementById("mlogo").style.fontSize = "6vw"; 
+    }
+    
+  </script>
+
+
+<script> //hamburger menu script
+  function toggleMenu() {
+    const menu = document.getElementById('menu');
+    menu.classList.toggle('active');
+    document.getElementById('b1').style.color = '#000000';
+    document.getElementById('b2').style.color = '#000000';
+    document.getElementById('b3').style.color = '#000000';
+    
+    // Fade in each menu item one at a time
+    const menuItems = document.querySelectorAll('.menu-item');
+    let delay = 0.1; // Start delay for the first item
+    menuItems.forEach(item => {
+      item.style.transitionDelay = delay + 's';
+      item.style.opacity = menu.classList.contains('active') ? '1' : '0';
+      delay += 0.1; // Increment delay for each item
+    });
+  }
+</script>
+
+  <h5>2023-2024 FTC SEASON LOGBOOK</h5>
+<div>
+  <p class="bp">Engineering Logbook: Team 22565, Rocket Robotics
+
+    This was the team's first time competing in the First Technology Challenge competition and we didn’t have previous experience to help solve problems, make the robot  attachments, code, or drive. As a new experience, the team used YouTube videos, tutorials, and each other to solve problems and design the robot.
+    <br><br>
+    9/10/23
+    After the parts were back ordered for over a month, we finally got them and were able to begin working. It started slowly finding a tutorial and opening the boxes of parts. Once we were able to start building we got the drivetrain made and ready for our next meeting to begin working on wheels and motors.
+    <br><br>
+    9/17/23
+    On one of our first days spent building the robot, the pieces were all still bagged and laid out on a table. After spending half the meeting just looking for parts we decided the sort them into piles which made it way easier to find them in the future. For one of the steps we could only move on with a certain channel and after a few minutes of looking someone found it under the bin of parts.
+    <br><br>
+    9/25/23
+     A challenge we found today is that using drawn pictures as our only guide makes it easy to make a mistake. We put parts on the robot facing the wrong direction, were baffled about how to wrap the wires around the robot, and found it was all too easy to put screws into the wrong channel. After lots of trial and error with the last one, we realized we had spent lots of time thinking we were putting screws in wrong before discovering we just hadn't followed the directions correctly.
+     <br><br>
+    9/31/23 
+    When connecting with screws there would be tight corners and angles which were too hard to screw in the way the guide instructed. Instead, we would flip the way the nuts faced so we could quickly and easily get them in.
+    For example, today there was a tough place where we were supposed to put a nut but since none of us could reach it, we had to flip the way the nut was facing. This solved the problem and we could quickly move on without spending time on making it fit.
+    <br><br>
+    10/10/23
+    When we were designing the claw, we faced a multitude of challenges and often didn’t know where to start. We knew that we had to make a basic design that could fit the shape of a hexagon, but we soon had questions. We had to figure out the angle to pick up the pixel, and how to with a weak arm. We decided to start building and see where it would go from there. Often there are too many considerations for all to be sufficiently approached before design starts. As projects can often be stuck throughout endless phases of design that will slow you down, we decided to try ideas. Our first design turned out to be better than expected, although it still requires numerous adjustments and modifications to get anywhere near a fully functioning prototype.
+    <br><br>
+    10/11/23
+    We started by rearranging the battery placement so it would fit on the robot without violating any restrictions.  We decided to put the battery sideways so the standoffs could hold the battery in place and it would not move.  After trying to do this, we decided it would be more efficient to move the switch into the robot, so we could link the IUD to someone’s computer to code the robot.
+    <br><br>
+    11/9/23 
+    Over the past two weeks, we’ve been working on one of if not the most critical components of a robot: the claw. At the very least, the claw must be capable of grasping, holding onto, and accurately placing the hexagonal pixels, which measure 3.5x3.0x0.5 inches. A variety of other tasks could be accomplished by the same claw, most notably the launching of a ‘drone’ or paper airplane, and holding the robot up for additional points. Unfortunately, we have been struggling to design and build a claw that can accomplish just the first task, due to our limited knowledge and general lack of experience. At least our team is beginning to learn what not to do. We’ve had a slight delay in constructing the claw of the robot, due to a misunderstanding in communication. However, this has inspired new innovative ideas to try and perfect the mechanical friction of the claw to be more efficient. Also, we have had some setbacks in practicing with the robot because our hub was out of date. However, we have been able to install the new software. We should be able to start practicing driving the robot next session.
+    <br><br>
+    11/16/23
+    Now that the general design and layout of the robot have become more finalized, we have begun the more technical aspects of integrating the various components we’re now working on. More of us have been bringing in powerful computers to be able to run the software development application that is needed to edit and upload the robot’s code. The application is only available on certain computers. The computer is first plugged into the Driver Hub, which provides a physical screen to access much of the hardware that is installed onto the robot. Various appliances such as motors and servos are each plugged into the Control Hub, which has more than a dozen analog and digital ports of various standards. One of these ports connects to the Control Hub. Using the Control Hub, variable names can be assigned to each of the robot’s appliances and gadgets, so they can be manipulated in the code. We’re currently in the process of reconfirming last year’s code with the new appliances we’ve installed this year, as well as learning how to do it. 
+    <br><br>
+    12/8/23
+    Today, the camera was finally fastened after the last meeting where we had argued over the position after finding out a few constraints. The field of view was lower than expected, the resolution was lower than expected, and the position of the claw, and the cable length (large slack). We settled on placing it in the center, near the control hub. We used zip ties to put it into place. We found that because the camera had an additional axis, we had to use two zip ties to keep it in place. We found the spare screws for the control hub and screwed them in. It took collaboration between three members to get the screws into place, as they had to be screwed in from the bottom, while others were working on testing the robot. While holding down the control hub down, someone screwed nuts into place. It is now secure in place for the competition, as additional metal support was added to hold it in place earlier. Fortunately, we also figured out the problem behind not being able to control servos through code. We found that the cable for the servos was plugged in reverse, causing the pins to receive the incorrect inputs. We were now able to successfully grab the hex with our claw.
+    <br><br>
+    12/9/23
+    Today lots of members met to complete the majority of the problems we have, including Manual + Auto code not being completed. Our coders coordinated together to progress their advancements on the code. One worked on the autonomous part, while another ground on the manual part. The paper plane launcher's progress stagnated after launching the project on Thursday, and we ran into the issue of remotely launching the plane. Additionally, it needed to be moved to the top of the claw due to size and weight constraints. The engineering team reassembled the launcher mechanism on top of the claw, however, more progress was required to complete the mechanism. There was a problem with the spacers of the claw, which didn’t allow it to be fully upright. This was fixed by reorienting the gears. We found that there were too few spacers/wrongly placed and were rubbing off of the side of the metal. The switch was left unplugged after the experiments on Wednesday to fix the battery position. This was also fixed initially by moving the battery, as cable length was a huge issue and could not be plugged in all the way, which solved the issue. However, while organizing cables it unplugged again and had to be reattached. This was frustrating for the team working on coding. We have not designated a driver at this moment. We decided to complete the code before training people to drive.
+    <br><br>
+    12/11/23
+    More members met to get some extra work done before the event on Saturday. We moved the plane launcher to the left side of the robot, as placing it on the top of the robot unfortunately made it taller than allowed. The first idea was to create another column similar to the arm, however, after some discussion, we settled on placing it to the side. A few issues we ran into included the width limit being hit as well, so the placement of the servo/holder had to be swapped and the strength of the servo was too weak for the strength on launching the plane we needed, so the movement of placement and strength of rubber bands had to be experimented with. Progress on the coding aspect was improving with the coding team mainly focusing on the manual part, which still needed to be completed. More discussion took place on the ideas of the most convenient controls, as we realized that 2 drivers were required. More convenient controls were made, not only to code but also to use. We realized we needed more development for presentations for judges and much more practice on the team front for interviews.
+    <br><br>
+    12/12/23
+     The plane launcher was fixed, however, it was very inconsistent and had to be redesigned due to instability. Some of our engineering team worked on it separately from others and unfortunately, it remained inoperable. We continued to work on the autonomous and manual parts and successfully implemented an algorithm to pick up the pixels in the autonomous op mode. Some of us called over the phone to discuss additional planning for the full group meetings on Wednesday, Thursday, and Friday, including presentations and judge overview documents.
+     <br><br>
+    1/4/24
+    Upon return from Winter Break, we immediately began to reflect on our previously logged and newfound issues from our first qualifier. One of our most prominent issues was that a gear connected to the control of the arm would slip very often, sometimes during matches. We identified the main issue for the gear slipping out after a thorough breakdown of the arm design as bronze bushings. A small mistake led to one of our most headache-inducing problems. 2 bronze bushings were required for the gear, but only one was used, leading to the gear falling out of place. The issue was promptly fixed, before running into more issues with the vital precision of the gear teeth, which was also fixed after extensive testing. The drone launcher redevelopment had also begun with a new design incorporating a simpler servo arm instead of using a metal rod. 
+    <br><br>
+    1/5/24
+    In this meeting, we introduced new members to our team before our competition week and set up a testing course for our drone launcher. One of the largest issues we had previously run into was a lack of testing, and this served to resolve this. We started by creating a variety of airplane designs and labeled rubber bands. We used a table to try every combination to find the right configuration to hit maximum points consistently.
+    <br><br>
+    1/8/24
+    At the start of competition week, we began by finishing up our drone launcher testing and began to move on to revising the portfolio and planning for the next week. The work was mostly focused on the portfolio and presentation scripts. The arm/claw iteration section was finalized as a template for the rest of the portfolio and used to create a page showing progress with the drone launcher. The team met after school to revise the pages already completed and further outline our portfolio goals.
+    <br><br>
+    1/9/24
+    Additional testing was conducted for the drone launcher, and we settled on a drone design. Tri fold development had begun after a final draft was approved and a new printable iteration was under development. Interview practice has also begun.
+    <br><br>
+    1/10/24
+    First day of portfolio review after first revision. The drone launcher was finalized and moved on to the completion of the Tri-Fold and drivers practice now that the robot was freed. Memorization of the interview was set as a goal.
+    <br><br>
+    1/11/24
+    Second and final day of portfolio review, in which it was completed. All hands were on practice and tri-fold completion. 
+    <br><br>
+    1/12/24
+    Final remarks and interview practice.
+    
+    
+    
+    
+    
+</p>
+
+</div>
+<button id="scrollBtn" title="Go to top">
+  <i class="arrow up"></i>
+</button>  
+
+  <script>
+    window.onscroll = function() {scrollFunction()};
+  
+      function scrollFunction() {
+        var scrollBtn = document.getElementById("scrollBtn");
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          scrollBtn.style.display = "block";
+        } else {
+          scrollBtn.style.display = "none";
+        }
+      }
+      
+      document.getElementById('scrollBtn').addEventListener('click', function(){
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+  
+      </script>
+        
+
+  
+</body> 
+</html>
