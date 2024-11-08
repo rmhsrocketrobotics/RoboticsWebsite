@@ -9,15 +9,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="icon" type="image/x-icon" href="icon.png">
     <meta name="msvalidate.01" content="329F02FC916DC78FB06020B3270EE128" />
-    <script type="text/javascript">
-        (function(c,l,a,r,i,t,y){
-            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-        })(window, document, "clarity", "script", "ojbkik8qzy");
-    </script>
     <link rel="stylesheet" href="styles.css">
-<title>ROCKET ROBOTICS | sponsors</title>
+    <title>ROCKET ROBOTICS | sponsors</title>
 </head>
 <body>
 
@@ -29,7 +22,7 @@
         <li><a id="join" href="https://docs.google.com/forms/d/e/1FAIpQLSd7NOsStJkJZtZGWvrIorwDFI7UH2DhrFovYELRW-v6dhiF3g/viewform?usp=sf_link">join</a></li>
         <li><a id="contact" href="contact.html">contact</a></li>
         <li><a id="donate" target="_blank" href="https://mcpsmd.schoolcashonline.com/Fee/Details/58441/354/False/True">donate</a></li>
-        <div id="hamburger" class="hamburger" style="display: none;" onclick="toggleMenu()">
+        <div id="hamburger" class="hamburger" style="display: none;padding: 1.8vw 5vw;" onclick="toggleMenu()">
           <div id="b1" class="bar"></div>
           <div id="b2" class="bar"></div>
           <div id="b3" class="bar"></div>
@@ -93,18 +86,25 @@
   
       </script>
 
-  <h5 style="padding-bottom: 1vw;">PROUD SPONSORS</h5>
-  <p class="par" style="padding-top: 1vw;">A huge thank you to our generous sponsors who help bring robotics to Richard Montgomery:</p>
-    <h4>TIER 2 SPONSORS</h4>
-    <img class="bigpic" src="img/sponsors/legacy.jpg" style="width:40vw; height: auto;"></img>
+  <h5 id="bigSponsor" style="padding-bottom: 1vw;">PROUD SPONSORS</h5>
+  <p class="par" id="sponsorText" style="padding-top: 1vw; padding-left: 3.3%;">A huge thank you to our generous sponsors who help fund our team to bring robotics to Richard Montgomery!</p>
+    <h4 id="T3" style="padding-left: 3%;margin-top: 10%;">TIER 3 SPONSORS</h4>
+    <div style="display:flex; align-items: center;">
+      <img class="bigpic" src="img/sponsors/legacy.jpg" style="width:36vw; height: auto; margin-left: 3%;"></img>
+    </div>
+    <h4 id="T2" style="padding-left: 3%;margin-top: 10%;">TIER 2 SPONSORS</h4>
+    <div style="display:flex; align-items: center;">
+      <img class="bigpic" src="img/sponsors/PingWind.png" style="width:36vw; height: auto; margin-left: 3%;"></img>
+    </div>
+    
 
 
     
-    <footer style="margin-top: 40vw">
+    <footer id="superskibidi" style="margin-top: 100%">
         <p style="font-size: 2vw;text-align: left; padding: 2%; padding-top:0%; margin-top: 0%; padding-bottom: 0%; display: flex; align-items: center;margin-bottom:0%;">☮️❤️🤖<br>
-          <a style="text-align: left; padding: 2%; color:#fff000" href="mailto:rmhs.robotics.team@gmail.com">rmhs.robotics.team@gmail.com</a>
+          <a style="text-align: left; padding: 2%; color:#ffd800" href="mailto:rmhs.robotics.team@gmail.com">rmhs.robotics.team@gmail.com</a>
         </p>
-      </footer>  
+    </footer>  
   <script> //change header to mobile version script
     if (screen.width <= 700) {
         document.getElementById("news").innerHTML = "";
@@ -114,7 +114,11 @@
         document.getElementById("sponsors").innerHTML = "";
         document.getElementById("hamburger").style.display = 'block';
         document.getElementById("mlogo").style.fontSize = "6vw"; 
-        document.getElementById("bottomEmoji").style.fontSize = "4vw";
+        document.getElementById("sponsorText").style.fontSize = "5vw"
+        document.getElementById("bigSponsor").style.fontSize = "11vw"
+        document.getElementById("T3").style.fontSize = "10vw"
+        document.getElementById("T2").style.fontSize = "10vw"
+        document.getElementById("bottomEmoji").style.fontSize = "4vw"
     }
     
   </script>
