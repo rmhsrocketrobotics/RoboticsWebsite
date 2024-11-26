@@ -83,7 +83,7 @@ h3 {
   background-color: #ffd800;
   margin: 0%;
   margin-bottom: 0% ;
-  margin-top: 10% ;
+  margin-top: 4% ;
   padding-left: 3%; 
 }
 h4 {
@@ -136,6 +136,8 @@ p {
   font-style:italic;
   padding: 2%;
   padding-top: 0;
+  padding-bottom: 0;
+  margin-bottom: 0;
 }
 .bp {
   font-family: 'DM Sans', sans-serif;
@@ -374,4 +376,63 @@ font-size: 1.2vw;
   #bottomEmail:hover {
     color: #f6b400;
   }
-  
+.star-container {
+  position: relative;
+  width: 10vw;  
+  height: 10vw; 
+  margin-top: 1vw;
+  margin-bottom: 1vw;
+}
+
+/* Black square for star shape */
+.square {
+  position: absolute;
+  width: 50%;    
+  height: 50%;   
+  top: 50%;      
+  left: 50%;     
+  transform: translate(-50%, -50%); 
+  background-color: black;
+}
+
+/* Star divider lines */
+.line-left, .line-right {
+  position: absolute;
+  height: 2px;   
+  width: 400%;    
+  background-color: black;
+  top: 50%;      
+  transform: translateY(-50%); 
+}
+.line-left {
+  left: -41.9vw;  
+}
+.line-right {
+  right: -41.9vw;
+}
+
+/* circles for the star divider */
+.circle {
+  position: absolute;
+  width: 50%;  
+  height: 50%;   
+  background-color: #FFD800;
+  border-radius: 50%;
+}
+
+.circle.top-left {
+  top: 0;
+  left: 0;
+}
+.circle.top-right {
+  top: 0;
+  right: 0;
+}
+.circle.bottom-left {
+  bottom: 0;
+  left: 0;
+}
+.circle.bottom-right {
+  bottom: 0;
+  right: 0;
+}

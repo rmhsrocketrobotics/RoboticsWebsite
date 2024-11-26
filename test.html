@@ -1,18 +1,98 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&family=Epilogue:wght@900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
-<link rel="stylesheet" href="styles.css">
-<title>RBOTS</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Star Shape with Square, Circles, and Side Lines</title>
+<style>
+/* Body styles to center content */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;   /* Full viewport height */
+  margin: 0;       /* Remove default margin */
+  background-color: #f0f0f0; /* Optional, for better contrast */
+}
+
+/* Container for the star shape */
+.star-container {
+  position: relative;
+  width: 10vw;  /* Make the container width responsive to viewport width */
+  height: 10vw; /* Make the container height responsive to viewport width */
+}
+
+/* Black square, centered and half the size of the container */
+.square {
+  position: absolute;
+  width: 50%;    /* Square takes up 50% of the container's width */
+  height: 50%;   /* Square takes up 50% of the container's height */
+  top: 50%;      /* Center vertically */
+  left: 50%;     /* Center horizontally */
+  transform: translate(-50%, -50%); /* Offset to truly center */
+  background-color: black;
+}
+
+/* Horizontal lines positioned to the left and right of the shape */
+.line-left, .line-right {
+  position: absolute;
+  height: 2px;   /* Thin horizontal line */
+  width: 80%;    /* Line width is responsive to container width */
+  background-color: black;
+  top: 50%;      /* Center the line vertically */
+  transform: translateY(-50%); /* Offset to truly center vertically */
+}
+
+/* Position the left line */
+.line-left {
+  left: -10vw;  /* Positioned to the left of the shape */
+}
+
+/* Position the right line */
+.line-right {
+  right: -10vw; /* Positioned to the right of the shape */
+}
+
+/* Yellow circles positioned to overlay the square */
+.circle {
+  position: absolute;
+  width: 50%;    /* Circles are sized relative to the container */
+  height: 50%;   /* Circles are sized relative to the container */
+  background-color: #FFD800;
+  border-radius: 50%;
+}
+
+/* Position each circle at each side of the square */
+.circle.top-left {
+  top: 0;
+  left: 0;
+}
+.circle.top-right {
+  top: 0;
+  right: 0;
+}
+.circle.bottom-left {
+  bottom: 0;
+  left: 0;
+}
+.circle.bottom-right {
+  bottom: 0;
+  right: 0;
+}
+
+</style>
 </head>
 <body>
-  <a href="#" class="fa fa-instagram"></a>
 
-  
-</body> 
+<div class="star-container">
+  <div class="line-left"></div>
+  <div class="line-right"></div>
+  <div class="square"></div>
+  <div class="circle top-left"></div>
+  <div class="circle top-right"></div>
+  <div class="circle bottom-left"></div>
+  <div class="circle bottom-right"></div>
+</div>
+
+</body>
 </html>
