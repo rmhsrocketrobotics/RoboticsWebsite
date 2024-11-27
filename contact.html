@@ -66,7 +66,7 @@
     
     
 
- <footer style="margin-top: 100vw">
+ <footer id="footer" style="margin-top: 100vw">
   <p id="bottomEmoji" style="font-size: 2vw;text-align: left; padding: 2%; padding-top:0%; margin-top: 0%;padding-bottom: 0%; display: flex; align-items: center;margin-bottom:0%;">☮️❤️🤖<br>
     <a id="bottomEmail" style="color:#ffd800; text-align: left; padding: 2%;" href="mailto:rmhs.robotics.team@gmail.com">rmhs.robotics.team@gmail.com</a>
   </p>
@@ -74,13 +74,13 @@
 
 <script> //change to mobile version script
   if (screen.width <= 700) {
-      document.getElementById("news").innerHTML = "";
       document.getElementById("contact").innerHTML = "";
       document.getElementById("donate").innerHTML = "";
       document.getElementById("sponsors").innerHTML = "";
       document.getElementById("hamburger").style.display = 'block';
       document.getElementById("mlogo").style.fontSize = "6vw"; 
       document.getElementById("bottomEmoji").style.fontSize = "4vw";
+      document.getElementById("footer").style.marginTop = "200vw";
   }
   
 </script>
