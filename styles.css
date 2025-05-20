@@ -73,7 +73,7 @@ h2 {
 }
 h3 {
   font-family:'Epilogue', sans-serif;
-  text-align: left;
+  text-align: center;
   font-weight: 1000;
   font-size: 7.5vw;
   position: relative;
@@ -84,7 +84,6 @@ h3 {
   margin: 0%;
   margin-bottom: 0% ;
   margin-top: 4% ;
-  padding-left: 6%; 
 }
 h4 {
   font-family:'Epilogue', sans-serif;
