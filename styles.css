@@ -24,14 +24,14 @@ overflow-x: hidden;
 padding: 5%;
 padding-bottom: 8%;
 float: left;
-padding-left: 3%;
+padding-left: 6%;
 }
 .portraitleft2 {
   padding: 5%;
   padding-bottom: 2%;
   float: left;
   padding-top: 7%;
-  padding-left: 3%;
+  padding-left: 6%;
   }
 .portraitright {
 float: right;
@@ -68,7 +68,7 @@ h2 {
   background-color: #ffd800;
   margin-top: 55%;
   margin-bottom: 0%;
-  padding-left: 3%; 
+  padding-left: 6%; 
   padding-top: 3.6%;
 }
 h3 {
@@ -84,7 +84,7 @@ h3 {
   margin: 0%;
   margin-bottom: 0% ;
   margin-top: 4% ;
-  padding-left: 3%; 
+  padding-left: 6%; 
 }
 h4 {
   font-family:'Epilogue', sans-serif;
@@ -108,7 +108,7 @@ h5 {
   z-index: 3;
   width: auto; 
   padding: 12%;
-  padding-left: 3%;
+  padding-left: 6%;
   margin: 0%;
 }
 p {
@@ -117,8 +117,8 @@ p {
   text-align: left;
   font-size: 2.8vw;
   margin-top: 2%;
-  margin-right: 2%;
-  padding-left: 3.1%;
+  padding-left: 6.2%;
+  padding-right: 6.2%;
   line-height: normal;
 }
 .par {
@@ -169,11 +169,10 @@ z-index: 2;
 position: fixed;
 width: 100%;
 z-index: 1000;
-padding-left: 2%;
 }
 
 li {
-float: left;
+float: right;
 z-index: 2;
 position: relative;
 padding-left: 1%;
@@ -399,16 +398,16 @@ font-size: 1.2vw;
 .line-left, .line-right {
   position: absolute;
   height: 2px;   
-  width: 400%;    
+  width: 370%;    
   background-color: black;
   top: 50%;      
   transform: translateY(-50%); 
 }
 .line-left {
-  left: -41.9vw;  
+  left: -38.8vw;  
 }
 .line-right {
-  right: -41.9vw;
+  right: -38.8vw;
 }
 
 /* circles for the star divider */
