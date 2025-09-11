@@ -301,7 +301,7 @@ font-size: 1.2vw;
 #scrollBtn:after { 
   content: '';
   position: absolute;
-  top: 50%;
+  top: 53%;
   left: 50%;
   width: 1vh;
   bottom: 1.5vh;
