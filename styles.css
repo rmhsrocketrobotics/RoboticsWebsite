@@ -265,17 +265,17 @@ font-size: 1.2vw;
 #scrollBtn {
   display: none;
   position: fixed;
-  bottom: 2.5vw;
-  right: 2.5vw;
+  bottom: 2.5vh;
+  right: 2.5vh;
   z-index: 99;
-  width: 10vw;
-  height: 10vw;
+  width: 10vh;
+  height: 10vh;
   border: none;
   outline: none;
   background-color: white;
   color: black;
   cursor: pointer;
-  margin:2vw;
+  margin:2vh;
   border-radius: 50%;
   transition: background-color 0.3s;
 }
@@ -284,26 +284,28 @@ font-size: 1.2vw;
   background-color: rgb(184, 184, 184);
 }
 
+/* corner part of the arrow */
 #scrollBtn:before {
   content: '';
   border: solid black;
-  border-width: 0 0.9vw 0.9vw 0;
+  border-width: 0 0.9vh 0.9vh 0;
   display: inline-block;
-  padding: 2vw;
+  padding: 1.6vh;
   transform: rotate(-135deg);
   -webkit-transform: rotate(-135deg);
   position: relative;
-  top: -1vw;
+  top: -0.5vh;
 }
 
+/* stick part of the arrow */
 #scrollBtn:after { 
   content: '';
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 1vw;
-  bottom: 1vw;
-  height: 8vw;
+  width: 1vh;
+  bottom: 1.5vh;
+  height: 6vh;
   background: black;
   transform: translate(-50%, -50%);
 }
