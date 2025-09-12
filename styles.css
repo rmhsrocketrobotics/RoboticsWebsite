@@ -1,9 +1,16 @@
+#background {
+  background-color: #ffd800;
+  z-index: 1;
+  width: 100%;
+}
 .slide {
+  will-change: transform;
   position: absolute;
-  transition: left 2s ease-in-out; /* Add ease-in-out here */
+  transition: opacity 1s ease-in-out, left 1s ease-in-out;
   width: 100%;
   background-size: cover;
-  z-index: 1;
+  z-index: -1;
+  overflow: hidden;
 }
 .mslide {
   position: absolute;
@@ -60,16 +67,17 @@ h2 {
   text-align: left;
   font-weight: 1000;
   padding-top: 1vw;
-  font-size: 7.5vw;
+  font-size: 4vw;
   position: relative;
   height: auto;
   z-index: 3 ;
-  width: 80%;
+  width: 100%;
   background-color: #ffd800;
-  margin-top: 55%;
+  margin-top: 15%;
   margin-bottom: 0%;
-  padding-left: 3%; 
+  padding-left: 0%; 
   padding-top: 3.6%;
+  text-align: center;
 }
 h3 {
   font-family:'Epilogue', sans-serif;
@@ -115,11 +123,13 @@ p {
   font-family: 'DM Sans', sans-serif;
   font-weight: 300;
   text-align: left;
-  font-size: 2.8vw;
+  font-size: 2vw;
   margin-top: 2%;
   margin-right: 2%;
   padding-left: 3.1%;
   line-height: normal;
+  background-color: #ffd800;
+  z-index: 3 ;
 }
 .par {
   font-family: 'DM Sans', sans-serif;
@@ -219,22 +229,20 @@ color: #ffd800;
   z-index: inherit;
   vertical-align: middle;
 }
+.centerImage {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
 .carousel {
-          position: relative;
+          /* position: relative;
           width: 100%;
-          z-index: 1;
+          z-index: -1;
           background-size: cover;
           overflow: hidden;
-          max-width: 100%;
-}
-.slide {
-          will-change: transform;
-          position: absolute;
-          transition: opacity 1s ease-in-out, left 1s ease-in-out;
-          width: 100%;
-          background-size: cover;
-          z-index: 1;
-          overflow-x: hidden;
+          max-width: 100%; */
+          height: 45vw;
 }
 .foot{
 display: inline;
