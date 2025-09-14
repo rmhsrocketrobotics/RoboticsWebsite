@@ -58,7 +58,7 @@ padding-bottom:6%;
   z-index: 3;
   width: 55vw;
   margin: auto;
-  top: 3vw;
+  top: 1vw;
   width: 30vw;
   padding: 10vw 35vw;
 }
@@ -126,7 +126,6 @@ p {
   font-size: 2vw;
   margin-top: 2%;
   margin-right: 2%;
-  padding-left: 3.1%;
   line-height: normal;
   background-color: #ffd800;
   z-index: 3 ;

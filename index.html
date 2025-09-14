@@ -64,13 +64,13 @@
   }
 </script>
 
-<div class="carousel">
+<div class="carousel" id="carousel">
     <img alt="Image not found." id="slide1" class="slide" src="img/1.jpg" style="left: 0;">
     <img alt="Image not found." id="slide2" class="slide" src="img/2.jpg" style="left: 100%;">
     <img alt="Image not found." id="slide3" class="slide" src="img/3.jpg" style="left: 200%;">
     <img alt="Image not found." id="slide4" class="slide" src="img/4.jpg" style="left: 300%;">
 </div>
-<div class="mslide-container">
+<div class="mslide-container" id = "mslide-container">
 <img alt="Image not found." id="mslide1" class="mslide" src="img/1.jpg" style="left: 0; display:none; opacity: 1;">
 <img alt="Image not found." id="mslide2" class="mslide" src="img/2.jpg" style="left: 0; display:none; opacity: 0;">
 <img alt="Image not found." id="mslide3" class="mslide" src="img/3.jpg" style="left: 0; display:none; opacity: 0;">
@@ -79,7 +79,7 @@
 <script>
   let slides = Array.from(document.querySelectorAll('.slide'));
   let index = 0;
-
+  //TODO: make this loop instead of going all the way back once it's done
   function nextSlide() {
     if (screen.width > 700){
       for (let i = 0; i < slides.length; i++) {
@@ -92,9 +92,9 @@
 </script>
 <div id="background">
   <!-- page 1 intro --> 
-  <img alt="Rocket Robotics Logo" class="baller" src="img/icon.png">
-  <div class="h2" style="width: 100%; background: #ffd800; z-index: 3; position: relative;"><h2 id="teamTitle">RICHARD MONTGOMERY HIGH SCHOOL ROBOTICS TEAM</h2></div>
-  <p style="margin-bottom: 0;" id="teamText">Rocket Robotics, FTC Team 22565, is an open team of students at Richard Montgomery High School that anyone can join. We are a student-led organization that strives to expose students to STEM topics through robotics. We have a major focus for our members to learn gracious professionalism, engineering skills, logical thinking, problem-solving, and management skills that they will be able to use throughout their life.</p>
+  <img alt="Rocket Robotics Logo" class="baller" id="baller" src="img/icon.png">
+  <div id="titleDiv"class="h2" style="width: 70%; background: #ffd800; z-index: 3; position: relative;left: 50%; top: 50%; transform: translate(-50%, 0%);"><h2 id="teamTitle">RICHARD MONTGOMERY HIGH SCHOOL ROBOTICS TEAM</h2></div>
+  <p style="margin-bottom: 0; margin-left: 15%; margin-right: 15%; text-align: center;" id="teamText">Rocket Robotics, FTC Team 22565, is an open team of students at Richard Montgomery High School that anyone can join. We are a student-led organization that strives to expose students to STEM topics through robotics. We have a major focus for our members to learn gracious professionalism, engineering skills, logical thinking, problem-solving, and management skills that they will be able to use throughout their life.</p>
   
   <!-- divider --> 
   <div style="left: 45vw;" class="star-container">
@@ -109,7 +109,7 @@
 
   <!-- p2 team image --> 
   <h2 id="meetTitle" style="padding-top: 0; margin-top: 0;">MEET OUR TEAM</h2>
-  <img alt="Image not found." class="bigpic" src="img/teampic.jpg" style="width:93.15vw;">
+  <img alt="Image not found." class="bigpic centerImage" src="img/teampic.jpg" style="width:70vw;" id="bigpic">
   <p id="compCapt" class="caption">2024-2025 season team photo</p>
 
   <!-- divider --> 
@@ -191,10 +191,23 @@
       document.getElementById("slide3").style.display = "none";
       document.getElementById("slide4").style.display = "none";
       document.getElementById("teamTitle").style.fontSize = "11vw";
+      document.getElementById("teamText").style.marginLeft = "5%";
+      document.getElementById("teamText").style.marginRight = "5%";
       document.getElementById("teamText").style.fontSize = "5vw";
       document.getElementById("meetTitle").style.fontSize = "11vw";
       document.getElementById("compCapt").style.fontSize = "4vw";
       document.getElementById("bottomEmoji").style.fontSize = "4vw";
+      document.getElementById("carousel").style.height = "0vw";
+      document.getElementById("leadershipPG").style.width = "100%"
+      document.getElementById("leadershipPG").style.height = "100%"
+      document.getElementById("bigpic").style.marginLeft = "auto"
+      document.getElementById("bigpic").style.marginRight = "auto"
+      document.getElementById("bigpic").style.display = "block"
+      document.getElementById("mslide-container").style.height = "45vw";
+      document.getElementById('baller').style.top = "8vw";
+      document.getElementById('titleDiv').style.width = "100%";
+      document.getElementById('scrollBtn').style.width = "8vh";
+      document.getElementById('scrollBtn').style.height = "8vh";
   }
   
 </script>
