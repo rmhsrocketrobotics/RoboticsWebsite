@@ -69,6 +69,7 @@
     <img alt="Image not found." id="slide2" class="slide" src="img/2.jpg" style="left: 100%;">
     <img alt="Image not found." id="slide3" class="slide" src="img/3.jpg" style="left: 200%;">
     <img alt="Image not found." id="slide4" class="slide" src="img/4.jpg" style="left: 300%;">
+    <img alt="Image not found." id="slide5" class="slide" src="img/5.jpg" style="left: 400%;">
 </div>
 <div class="mslide-container" id = "mslide-container">
 <img alt="Image not found." id="mslide1" class="mslide" src="img/1.jpg" style="left: 0; display:none; opacity: 1;">
@@ -78,14 +79,29 @@
 </div>
 <script>
   let slides = Array.from(document.querySelectorAll('.slide'));
-  let index = 0;
-  //TODO: make this loop instead of going all the way back once it's done
+  
   function nextSlide() {
     if (screen.width > 700){
       for (let i = 0; i < slides.length; i++) {
-          slides[i].style.left = ((i - index) * 100) + '%';
+          let imagePosition = parseInt(slides[i].style.left, 10);
+
+          //slide the images towards the left
+          slides[i].style.left = (imagePosition - 100) + '%';
+
+          let newImagePosition = imagePosition - 100;
+
+          //if the image is off the screen, put it back on the right
+          if (newImagePosition == -200) {
+            slides[i].style.left = ((slides.length - 2) * 100) + '%';
+          }
+          
+          //if the image is offscreen, don't display it
+          if (newImagePosition == 0 || imagePosition == 0) {
+            slides[i].style.visibility = "visible";
+          } else {
+            slides[i].style.visibility = "hidden";
+          }
       }
-      index = (index + 1) % slides.length;
     }
   }
   setInterval(nextSlide, 5000); // change slide every 5 seconds
