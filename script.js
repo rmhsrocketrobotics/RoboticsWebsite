@@ -1,68 +1,157 @@
-let slides = Array.from(document.querySelectorAll('.slide'));
-
-function nextSlide() {
-    if (screen.width > 700) {
-        for (let i = 0; i < slides.length; i++) {
-            let imagePosition = parseInt(slides[i].style.left, 10);
-
-            //slide the images towards the left
-            slides[i].style.left = (imagePosition - 100) + '%';
-
-            let newImagePosition = imagePosition - 100;
-
-            //if the image is off the screen, put it back on the right
-            if (newImagePosition == -200) {
-                slides[i].style.left = ((slides.length - 2) * 100) + '%';
-            }
-
-            //if the image is offscreen, don't display it
-            if (newImagePosition == 0 || imagePosition == 0) {
-                slides[i].style.visibility = "visible";
-            } else {
-                slides[i].style.visibility = "hidden";
-            }
-        }
+// ------custom star divider thingy (basically a fancy <br>)
+class CustomDivider extends HTMLElement {
+    connectedCallback() {
+        this.innerHTML = `
+<div style="left: 45vw;" class="star-container">
+    <div class="line-left"></div>
+    <div class="line-right"></div>
+    <div class="square"></div>
+    <div class="circle top-left"></div>
+    <div class="circle top-right"></div>
+    <div class="circle bottom-left"></div>
+    <div class="circle bottom-right"></div>
+</div>
+        `;
     }
 }
-setInterval(nextSlide, 5000); // change slide every 5 seconds
+customElements.define('custom-divider', CustomDivider);
 
-if (screen.width <= 700) {
-    window.location.replace("mobile/index.html");
-    document.getElementById("contact").innerHTML = "";
-    document.getElementById("donate").innerHTML = "";
-    document.getElementById("sponsors").innerHTML = "";
+// ------desktop nav bar
+class NavBar extends HTMLElement {
+    connectedCallback() {
+        this.innerHTML = `
+<ul>
+    <li><a id="mlogo" class="minilogo" href="index.html">ROCKET ROBOTICS</a></li>
+    <li><a class="nav-bar-item" id="sponsors" href="sponsors.html">sponsors</a></li>
+    <li><a class="nav-bar-item" id="contact" href="contact.html">contact</a></li>
+    <div id="hamburger" class="hamburger" style="display: none;padding: 1.8vw 5vw;" onclick="toggleMenu()">
+    <div id="b1" class="bar"></div>
+    <div id="b2" class="bar"></div>
+    <div id="b3" class="bar"></div>
+    </div>
+</ul>
+        `;
+    }
+}
+customElements.define('nav-bar', NavBar);
 
+// ------mobile hamburger menu
+class HambugerMenu extends HTMLElement {
+    connectedCallback() {
+        this.innerHTML = `
+<div class="menu-container" id="menu">
+<div id="inhamburger" class="hamburger" onclick="toggleMenu()">
+    <div id="b1" class="bar" style="background-color: #000000;"></div>
+    <div id="b2" class="bar" style="background-color: #000000;"></div>
+    <div id="b3" class="bar" style="background-color: #000000;"></div>
+</div>
+<div class="menu-item"><a id="mlogo"
+    style="font-size: 9vw; font-family: 'Epilogue', sans-serif; text-decoration: none; color:black;"
+    href="index.html">ROCKET ROBOTICS</a></div>
+
+<div class="menu-item"><a id="sponsors" href="sponsors.html"
+    style="font-family: 'DM Sans', sans-serif; font-size: 8vw; text-decoration: none; color:black;">sponsors</a>
+</div>
+<div class="menu-item"><a id="contact" href="contact.html"
+    style="font-family: 'DM Sans', sans-serif; font-size: 8vw; text-decoration: none; color:black;">contact</a>
+</div>
+        `;
+    }
+}
+customElements.define('hamburger-menu', HambugerMenu);
+
+// ------ desktop footer
+class DesktopFooter extends HTMLElement {
+    connectedCallback() {
+        this.innerHTML = `
+<footer style="margin-top: 6vw; background-color: black;">
+<p id="bottom-emoji">
+    ☮️❤️🤖<br>
+    <a id="bottomEmail" style="text-align: left; padding: 2%;"
+    href="mailto:contact@rmhsroboticsteam.com">contact@rmhsroboticsteam.com</a>
+</p>
+</footer>
+        `;
+    }
+}
+// ------ mobile footer
+class MobileFooter extends HTMLElement {
+    connectedCallback() {
+        this.innerHTML = `
+<footer style="margin-top: 6vw; background-color: black;">
+<p id="bottom-emoji" style="justify-content: center;">☮️❤️🤖</p>
+    <p id="bottom-emoji" style="justify-content: center;">
+    <a id="bottomEmail" style="text-align: ceneter; padding: 2%;"
+    href="mailto:contact@rmhsroboticsteam.com">contact@rmhsroboticsteam.com</a>
+    </p>
+
+</footer>
+        `;
+    }
+}
+
+
+
+// ------changes to mobile mode based on the screen width
+function updateViewingMode() {
+    if (window.innerWidth > 700) { //orgininally used screen.width
+        customElements.define('custom-footer', DesktopFooter);
+        return;
+    }
+    customElements.define('custom-footer', MobileFooter);
+
+    let pElements = document.getElementsByTagName("p");
+    let h2Elements = document.getElementsByTagName("h2");
+
+    //hide desktop nav bar
+    let navBarItems = document.getElementsByClassName("nav-bar-item");
+    for (let i = 0; i < navBarItems.length; i++) {
+        navBarItems[i].style.display = "none";
+    }
+
+    //show mobile hamburger menu
     document.getElementById("hamburger").style.display = 'block';
     document.getElementById("mlogo").style.fontSize = "6vw";
     document.getElementById("mlogo").style.height = "5vw";
-    document.getElementById("mslide1").style.display = "block";
-    document.getElementById("mslide2").style.display = "block";
-    document.getElementById("mslide3").style.display = "block";
-    document.getElementById("mslide4").style.display = "block";
-    document.getElementById("slide1").style.display = "none";
-    document.getElementById("slide2").style.display = "none";
-    document.getElementById("slide3").style.display = "none";
-    document.getElementById("slide4").style.display = "none";
-    document.getElementById("teamTitle").style.fontSize = "11vw";
-    document.getElementById("teamText").style.marginLeft = "5%";
-    document.getElementById("teamText").style.marginRight = "5%";
-    document.getElementById("teamText").style.fontSize = "5vw";
-    document.getElementById("meetTitle").style.fontSize = "11vw";
-    document.getElementById("compCapt").style.fontSize = "4vw";
-    document.getElementById("bottomEmoji").style.fontSize = "4vw";
-    document.getElementById("carousel").style.height = "0vw";
-    document.getElementById("leadershipPG").style.width = "100%"
-    document.getElementById("leadershipPG").style.height = "100%"
-    document.getElementById("bigpic").style.marginLeft = "auto"
-    document.getElementById("bigpic").style.marginRight = "auto"
-    document.getElementById("bigpic").style.display = "block"
-    document.getElementById("mslide-container").style.height = "45vw";
-    document.getElementById('baller').style.top = "8vw";
-    document.getElementById('titleDiv').style.width = "100%";
+
+    //change text size/fomatting
+    for (let i = 0; i < pElements.length; i++) {
+        pElements[i].style.fontSize = "5vw";
+        pElements[i].style.marginLeft = "5%";
+        pElements[i].style.marginRight = "5%";
+    }
+    for (let i = 0; i < h2Elements.length; i++) {
+        h2Elements[i].style.fontSize = "9vw";
+        h2Elements[i].style.marginLeft = "5%";
+        h2Elements[i].style.marginRight = "5%";
+        h2Elements[i].style.width = "90%";
+    }
+
+    //change go to top button size
     document.getElementById('scrollBtn').style.width = "8vh";
     document.getElementById('scrollBtn').style.height = "8vh";
-}
 
+    document.body.appendChild(document.createElement("star-divider"));
+}
+updateViewingMode()
+//window.onresize = function () {updateViewingMode()}
+
+
+// ------code for that button that scrolls to top of the page
+window.onscroll = function () { scrollFunction() };
+function scrollFunction() {
+    var scrollBtn = document.getElementById("scrollBtn");
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        scrollBtn.style.display = "block";
+    } else {
+        scrollBtn.style.display = "none";
+    }
+}
+document.getElementById('scrollBtn').addEventListener('click', function () {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+// ------mobile hamburger menu code
 function toggleMenu() {
     const menu = document.getElementById('menu');
     menu.classList.toggle('active');
@@ -71,41 +160,8 @@ function toggleMenu() {
     const menuItems = document.querySelectorAll('.menu-item');
     let delay = 0.1; // Start delay for the first item
     menuItems.forEach(item => {
-        item.style.transitionDelay = delay + 's';
-        item.style.opacity = menu.classList.contains('active') ? '1' : '0';
-        delay += 0.1; // Increment delay for each item
+    item.style.transitionDelay = delay + 's';
+    item.style.opacity = menu.classList.contains('active') ? '1' : '0';
+    delay += 0.1; // Increment delay for each item
     });
 }
-
-class CustomDivider extends HTMLElement {
-connectedCallback() {
-    this.innerHTML = `
-    <div style="left: 45vw;" class="star-container">
-        <div class="line-left"></div>
-        <div class="line-right"></div>
-        <div class="square"></div>
-        <div class="circle top-left"></div>
-        <div class="circle top-right"></div>
-        <div class="circle bottom-left"></div>
-        <div class="circle bottom-right"></div>
-    </div>
-    `;
-}
-}
-
-customElements.define('custom-divider', CustomDivider);
-
-window.onscroll = function () { scrollFunction() };
-
-function scrollFunction() {
-var scrollBtn = document.getElementById("scrollBtn");
-if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    scrollBtn.style.display = "block";
-} else {
-    scrollBtn.style.display = "none";
-}
-}
-
-document.getElementById('scrollBtn').addEventListener('click', function () {
-window.scrollTo({ top: 0, behavior: 'smooth' });
-});

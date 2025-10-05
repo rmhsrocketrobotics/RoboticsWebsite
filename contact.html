@@ -27,42 +27,12 @@
   <h1 style="font-size: 0;">Rocket Robotics, First Tech Challenge (FTC) Team 22565, is an up and coming student-led open
     team at Richard Montgomery High School. Based in the Rockville, Maryland area, we strive to expose students to STEM
     topics through robotics while learning life-long skills</h1>
-  <ul>
-    <li><a id="mlogo" class="minilogo" href="index.html">ROCKET ROBOTICS</a></li>
-    <li><a id="sponsors" href="sponsors.html">sponsors</a></li>
-    <li><a id="contact" href="contact.html">contact</a></li>
-    <li><a id="donate" target="_blank"
-        href="https://mcpsmd.schoolcashonline.com/Fee/Details/76216/354/False/True">donate</a></li>
-    <div id="hamburger" class="hamburger" style="display: none;padding: 1.8vw 5vw;" onclick="toggleMenu()">
-      <div id="b1" class="bar"></div>
-      <div id="b2" class="bar"></div>
-      <div id="b3" class="bar"></div>
-    </div>
-  </ul>
+    
+  <!-- code for these is found in script.js -->
+  <nav-bar></nav-bar>
+  <hamburger-menu></hamburger-menu>
 
-  <!-- hamburger main menu (mobile) -->
-  <div class="menu-container" id="menu">
-    <div id="inhamburger" class="hamburger" onclick="toggleMenu()">
-      <div id="b1" class="bar" style="background-color: #000000;"></div>
-      <div id="b2" class="bar" style="background-color: #000000;"></div>
-      <div id="b3" class="bar" style="background-color: #000000;"></div>
-    </div>
-    <div class="menu-item"><a id="mlogo"
-        style="font-size: 9vw; font-family: 'Epilogue', sans-serif; text-decoration: none; color:black;"
-        href="index.html">ROCKET ROBOTICS</a></div>
-
-    <div class="menu-item"><a id="sponsors" href="sponsors.html"
-        style="font-family: 'DM Sans', sans-serif; font-size: 8vw; text-decoration: none; color:black;">sponsors</a>
-    </div>
-    <div class="menu-item"><a id="contact" href="contact.html"
-        style="font-family: 'DM Sans', sans-serif; font-size: 8vw; text-decoration: none; color:black;">contact</a>
-    </div>
-    <div class="menu-item"><a id="donate" target="_blank"
-        href="https://mcpsmd.schoolcashonline.com/Fee/Details/58441/354/False/True"
-        style="font-family: 'DM Sans', sans-serif; font-size: 8vw; text-decoration: none; color:black;">donate</a></div>
-  </div>
-
-  <p style="margin-top: 8vw;"></p>
+  <div id="top-buffer"></div>
   
   <h2>CONTACT ROCKET ROBOTICS</h2>
 
@@ -85,15 +55,19 @@
   <h1 style="font-size: 0;">richard montgomery high school</h1>
   <h1 style="font-size: 0;">RM Robotics</h1>
 
-  <script src="script.js"></script>
+  <custom-footer></custom-footer>
 
-  <footer style="margin-top: 6vw; background-color: black;">
-    <p id="bottom-emoji">
-      ☮️❤️🤖<br>
-      <a id="bottomEmail" style="text-align: left; padding: 2%;"
-        href="mailto:contact@rmhsroboticsteam.com">contact@rmhsroboticsteam.com</a>
-    </p>
-  </footer>
+  <script src="script.js"></script>
+  <script>
+    //custom script for this page
+    if (window.innerWidth <= 700) {
+      document.getElementById("top-buffer").style.marginTop = "17vw";
+
+      document.getElementById("instagram-imbed").style.width = "90vw";
+      document.getElementById("instagram-imbed").style.paddingLeft = "5vw";
+      document.getElementById("instagram-imbed").style.paddingRight = "5vw";
+    }
+  </script>
 </body>
 
 </html>

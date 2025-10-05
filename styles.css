@@ -15,6 +15,15 @@
   object-fit: cover;
 }
 
+.mslide-container {
+  position: relative;
+  width: 100%;
+  z-index: -1;
+  background-size: cover;
+  overflow: hidden;
+  max-width: 100%;
+}
+
 .mslide {
   position: absolute;
   width: 100%;
@@ -54,20 +63,20 @@ body {
 }
 
 .bigpic {
-  float: center;
   margin: 3.5%;
   margin-bottom: 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70vw;
 }
 
 
-.baller {
+.logo {
   position: absolute;
-  z-index: 3;
-  width: 55vw;
   margin: auto;
-  top: 1vw;
   width: 30vw;
-  padding: 10vw 35vw;
+  padding: 22vh 35vw;
 }
 
 h2 {
@@ -146,8 +155,6 @@ p {
 table {
   margin-left: auto;
   margin-right: auto;
-  border-color: #333;
-  border-width: 1px;
   width: 85.5vw;
   margin-bottom: 2vh;
 }
@@ -292,13 +299,6 @@ li a:hover {
   position: relative;
   z-index: inherit;
   vertical-align: middle;
-}
-
-.centerImage {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
 }
 
 .carousel {
@@ -584,4 +584,8 @@ footer {
   display: flex;
   margin-left: auto;
   margin-right: auto;
+}
+
+#top-buffer {
+  margin-top: 8vw;
 }

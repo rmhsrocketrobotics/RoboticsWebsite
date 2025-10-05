@@ -21,49 +21,15 @@
 </head>
 
 <body>
-
-
-
   <h1 style="font-size: 0;">Rocket Robotics, First Tech Challenge (FTC) Team 22565, is an up and coming student-led open
     team at Richard Montgomery High School. Based in the Rockville, Maryland area, we strive to expose students to STEM
     topics through robotics while learning life-long skills</h1>
-  <ul>
-    <li><a id="mlogo" class="minilogo" href="index.html">ROCKET ROBOTICS</a></li>
-    <li><a id="sponsors" href="sponsors.html">sponsors</a></li>
-    <li><a id="contact" href="contact.html">contact</a></li>
-    <li><a id="donate" target="_blank"
-        href="https://mcpsmd.schoolcashonline.com/Fee/Details/76216/354/False/True">donate</a></li>
-    <div id="hamburger" class="hamburger" style="display: none;padding: 1.8vw 5vw;" onclick="toggleMenu()">
-      <div id="b1" class="bar"></div>
-      <div id="b2" class="bar"></div>
-      <div id="b3" class="bar"></div>
-    </div>
-  </ul>
+  
+  <!-- code for these is found in script.js -->
+  <nav-bar></nav-bar>
+  <hamburger-menu></hamburger-menu>
 
-  <!-- hamburger main menu (mobile) -->
-  <div class="menu-container" id="menu">
-    <div id="inhamburger" class="hamburger" onclick="toggleMenu()">
-      <div id="b1" class="bar" style="background-color: #000000;"></div>
-      <div id="b2" class="bar" style="background-color: #000000;"></div>
-      <div id="b3" class="bar" style="background-color: #000000;"></div>
-    </div>
-    <div class="menu-item"><a id="mlogo"
-        style="font-size: 9vw; font-family: 'Epilogue', sans-serif; text-decoration: none; color:black;"
-        href="index.html">ROCKET ROBOTICS</a></div>
-
-    <div class="menu-item"><a id="sponsors" href="sponsors.html"
-        style="font-family: 'DM Sans', sans-serif; font-size: 8vw; text-decoration: none; color:black;">sponsors</a>
-    </div>
-    <div class="menu-item"><a id="contact" href="contact.html"
-        style="font-family: 'DM Sans', sans-serif; font-size: 8vw; text-decoration: none; color:black;">contact</a>
-    </div>
-    <div class="menu-item"><a id="donate" target="_blank"
-        href="https://mcpsmd.schoolcashonline.com/Fee/Details/58441/354/False/True"
-        style="font-family: 'DM Sans', sans-serif; font-size: 8vw; text-decoration: none; color:black;">donate</a></div>
-  </div>
-
-  <img alt="Rocket Robotics Logo" class="baller" id="baller" src="img/icon.png">
-
+  <img alt="Rocket Robotics Logo" class="logo" id="logo" src="img/icon.png">
   <div class="carousel" id="carousel">
     <img alt="Image not found." id="slide1" class="slide" src="img/1.jpg" style="left: 0;">
     <img alt="Image not found." id="slide2" class="slide" src="img/2.jpg" style="left: 100%;">
@@ -76,6 +42,7 @@
     <img alt="Image not found." id="mslide2" class="mslide" src="img/2.jpg" style="left: 0; display:none; opacity: 0;">
     <img alt="Image not found." id="mslide3" class="mslide" src="img/3.jpg" style="left: 0; display:none; opacity: 0;">
     <img alt="Image not found." id="mslide4" class="mslide" src="img/4.jpg" style="left: 0; display:none; opacity: 0;">
+    <img alt="Image not found." id="mslide5" class="mslide" src="img/5.jpg" style="left: 0; display:none; opacity: 0;">
   </div>
 
   <h2>RICHARD MONTGOMERY HIGH SCHOOL ROBOTICS TEAM</h2>
@@ -92,13 +59,13 @@
   <custom-divider></custom-divider>
 
   <h2>MEET OUR TEAM</h2>
-  <img alt="Image not found." class="bigpic centerImage" src="img/teampic.jpg" style="width:70vw;" id="bigpic">
+  <img alt="Image not found." class="bigpic" src="img/teampic.jpg" id="bigpic">
   <p id="compCapt" class="caption">2024-2025 season team photo</p>
 
   <custom-divider></custom-divider>
 
   <h2>LEADERSHIP</h2>
-  <table style="margin-top: 6vh;">
+  <table style="margin-top: 6vh;" id="top-table">
     <tr>
       <td><img alt="Image not found." src="img/placeholder.png" class="table-image">
         <p class="table-text">BRYNN JOHNSON</p>
@@ -115,15 +82,17 @@
     </tr>
   </table>
 
-  <table style="width: 50vw;">
+  <table style="width: 50vw;" id="bottom-table">
     <tr>
-      <td><img alt="Image not found." src="img/placeholder.png" class="table-image">
+      <td style="width: 50%;" class="bottom-table-box"><img alt="Image not found." src="img/placeholder.png"
+          class="table-image">
         <p class="table-text">GANESH RAMAMURTHI</p>
         <p class="table-caption">outeach and design coordinator</p>
       </td>
-      <td><img alt="Image not found." src="img/placeholder.png" class="table-image">
+      <td style="width: 50%;" class="bottom-table-box"><img alt="Image not found." src="img/placeholder.png"
+          class="table-image">
         <p class="table-text">VED SHEWANI</p>
-        <p class="table-caption">engineering coordinator</p>
+        <p class="table-caption">outeach and design coordinator</p>
       </td>
     </tr>
   </table>
@@ -139,15 +108,107 @@
   <h1 style="font-size: 0;">richard montgomery high school</h1>
   <h1 style="font-size: 0;">RM Robotics</h1>
 
-  <script src="script.js"></script>
+  <custom-footer></custom-footer>
 
-  <footer style="margin-top: 6vw; background-color: black;">
-    <p id="bottom-emoji">
-      ☮️❤️🤖<br>
-      <a id="bottomEmail" style="text-align: left; padding: 2%;"
-        href="mailto:contact@rmhsroboticsteam.com">contact@rmhsroboticsteam.com</a>
-    </p>
-  </footer>
+  <script src="script.js"></script>
+  <script>
+    //custom script for this page
+
+    // ------desktop carousel code
+    let slides = Array.from(document.querySelectorAll('.slide'));
+    function nextSlide() {
+      for (let i = 0; i < slides.length; i++) {
+        let imagePosition = parseInt(slides[i].style.left, 10);
+
+        //slide the images towards the left
+        slides[i].style.left = (imagePosition - 100) + '%';
+
+        let newImagePosition = imagePosition - 100;
+
+        //if the image is off the screen, put it back on the right
+        if (newImagePosition == -200) {
+          slides[i].style.left = ((slides.length - 2) * 100) + '%';
+        }
+
+        //if the image is offscreen, don't display it
+        if (newImagePosition == 0 || imagePosition == 0) {
+          slides[i].style.visibility = "visible";
+        } else {
+          slides[i].style.visibility = "hidden";
+        }
+      }
+    }
+
+    // ------mobile slide thingy
+    const container = document.querySelector('.mslide-container');
+    const mslides = container.querySelectorAll('.mslide');
+
+    let currentMslide = 0; // Can also be called currentMSlide
+
+    function showMslide() {
+      mslides[currentMslide].style.opacity = 0;
+      currentMslide = (currentMslide + 1) % mslides.length;
+      mslides[currentMslide].style.opacity = 1;
+    }
+
+    // ------changes to mobile mode based on the screen width
+    if (window.innerWidth <= 700) {
+      setInterval(nextSlide, 5000); // change slide every 5 seconds
+
+      //change logo positioning
+      document.getElementById("logo").style.padding = "7.5vh 35vw";
+
+      //hide desktop slide
+      document.getElementById("carousel").style.height = "0px";
+      document.getElementById("slide1").style.display = "none";
+      document.getElementById("slide2").style.display = "none";
+      document.getElementById("slide3").style.display = "none";
+      document.getElementById("slide4").style.display = "none";
+      document.getElementById("slide5").style.display = "none";
+
+      //show mobile slide
+      document.getElementById("mslide1").style.display = "block";
+      document.getElementById("mslide2").style.display = "block";
+      document.getElementById("mslide3").style.display = "block";
+      document.getElementById("mslide4").style.display = "block";
+      document.getElementById("mslide-container").style.height = "27vh";
+      document.getElementById("mslide-container").style.marginBottom = "3.6%";
+      setInterval(showMslide, 5000);
+
+      //adjust picture size
+      document.getElementById("bigpic").style.width = "90vw";
+
+      //change table formatting
+      document.getElementById("top-table").style.width = "95vw";
+      document.getElementById("top-table").style.marginTop = "3vh";
+      document.getElementById("bottom-table").style.width = "63.4vw";
+
+      tableImages = document.querySelectorAll('.table-image');
+      for (let i = 0; i < tableImages.length; i++) {
+        tableImages[i].setAttribute("style", "width: 100%; margin: 0;");
+      }
+
+      tableText = document.querySelectorAll('.table-text');
+      for (let i = 0; i < tableText.length; i++) {
+        tableText[i].setAttribute("style", "font-size: 2.5vw;");
+      }
+
+      tableCaption = document.querySelectorAll('.table-caption');
+      for (let i = 0; i < tableCaption.length; i++) {
+        tableCaption[i].setAttribute("style", "font-size: 2.5vw;");
+      }
+
+      tableBoxes = document.getElementsByTagName("td");
+      for (let i = 0; i < tableBoxes.length; i++) {
+        tableBoxes[i].setAttribute("style", "padding: 0;");
+      }
+
+      bottomTableBoxes = document.querySelectorAll('.bottom-table-box');
+      for (let i = 0; i < bottomTableBoxes.length; i++) {
+        bottomTableBoxes[i].setAttribute("style", "padding: 0; width: 50%;");
+      }
+    }
+  </script>
 </body>
 
 </html>
