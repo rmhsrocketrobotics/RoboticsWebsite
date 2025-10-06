@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&family=Epilogue:wght@900&display=swap" rel="stylesheet">
+  <title>Redirecting...</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family:'Epilogue', sans-serif;
+      font-weight: 1000;
+      background-color: #ffd800;
+    }
+
+    .error-message {
+      text-align: center;
+    }
+
+    .error-message h1 {
+      font-size: 7rem;
+      margin-bottom: 0rem;
+    }
+
+    .error-message p {
+      font-size: 1.5rem;
+      margin-bottom: 3.5rem;
+      margin-top: 0;
+    }
+
+    .go-home-button {
+      display: inline-block;
+      background-color: rgb(153, 130, 0);
+      color: #fff;
+      text-decoration: none;
+      padding: 1rem 2rem;
+      border-radius: 4px;
+      font-size: 1.2rem;
+      transition: background-color 0.3s ease;
+    }
+
+    .go-home-button:hover {
+      color: #ffd800;
+    }
+
+    p{
+        font-family: 'DM Sans', sans-serif;
+        font-weight: 300;
+    }
+
+    a{
+        font-family: 'DM Sans', sans-serif;
+        color: rgb(255, 255, 255);
+    }
+    .baller {
+        position: absolute;
+        z-index: 3;
+        width: 55vw;
+        margin: auto;
+        top: 3vw;
+        width: 30vw;
+        padding: 10vw 35vw;
+    }
+  </style>
+</head>
+<body>
+  <div class="error-message">
+    <h1>we have a new domain!</h1>
+    <p>we're now using rocketroboticsftc.com! redirecting you now...</p>
+    <a href="https://rocketroboticsftc.com" class="go-home-button">go home</a>
+  </div>
+  <script>
+  setTimeout(function(){ window.location.href = "https://rocketroboticsftc.com"; }, 3000);
+  </script>
+</body>
+</html>
