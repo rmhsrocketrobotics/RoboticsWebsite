@@ -127,17 +127,15 @@ h4 {
 }
 
 h5 {
-  font-family: 'Epilogue', sans-serif;
-  text-align: left;
-  font-weight: 1000;
-  font-size: 7.5vw;
-  position: relative;
-  height: auto;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 300;
+  text-align: center;
+  font-size: 2vw;
+  margin-left: 15%;
+  margin-right: 15%;
+  line-height: normal;
+  background-color: #ffd800;
   z-index: 3;
-  width: auto;
-  padding: 12%;
-  padding-left: 3%;
-  margin: 0%;
 }
 
 p {

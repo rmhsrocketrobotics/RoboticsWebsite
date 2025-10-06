@@ -67,22 +67,39 @@
   <h2>LEADERSHIP</h2>
   <table style="margin-top: 6vh;" id="top-table">
     <tr>
-      <td><img alt="Image not found." src="img/placeholder.png" class="table-image">
-        <p class="table-text">BRYNN JOHNSON</p>
-        <p class="table-caption">co-captian</p>
+      <td><img alt="Image not found." src="img/leadership/brynn.jpg" class="table-image">
+        <h5 class="table-text">BRYNN JOHNSON</h5>
+        <h5 class="table-caption">co-captian</h5>
       </td>
-      <td><img alt="Image not found." src="img/placeholder.png" class="table-image">
-        <p class="table-text">YEGOR KRYVENKA</p>
-        <p class="table-caption">vice captain</p>
+      <td><img alt="Image not found." src="img/leadership/yegor.jpg" class="table-image">
+        <h5 class="table-text">YEGOR KRYVENKA</h5>
+        <h5 class="table-caption">vice captain</h5>
       </td>
-      <td><img alt="Image not found." src="img/placeholder.png" class="table-image">
-        <p class="table-text">KRISTIYAN DONCHEV</p>
-        <p class="table-caption">co-captian</p>
+      <td><img alt="Image not found." src="img/leadership/kris.jpg" class="table-image">
+        <h5 class="table-text">KRISTIYAN DONCHEV</h5>
+        <h5 class="table-caption">co-captian</h5>
       </td>
     </tr>
   </table>
 
-  <table style="width: 50vw;" id="bottom-table">
+  <table id="bottom-table">
+    <tr>
+      <td><img alt="Image not found." src="img/leadership/ganesh.jpg" class="table-image">
+        <h5 class="table-text">GANESH RAMAMURTHI</h5>
+        <h5 class="table-caption">outeach and design coordinator</h5>
+      </td>
+      <td><img alt="Image not found." src="img/leadership/ved.jpg" class="table-image">
+        <h5 class="table-text">VED SHEWANI</h5>
+        <h5 class="table-caption">engineering coordinator</h5>
+      </td>
+      <td><img alt="Image not found." src="img/leadership/drew.jpg" class="table-image">
+        <h5 class="table-text">DREW WONG</h5>
+        <h5 class="table-caption">programming coordinator</h5>
+      </td>
+    </tr>
+  </table>
+
+  <!-- <table style="width: 50vw;" id="bottom-table"> <---- CODE FOR A ROW OF TWO PEOPLE
     <tr>
       <td style="width: 50%;" class="bottom-table-box"><img alt="Image not found." src="img/placeholder.png"
           class="table-image">
@@ -95,7 +112,7 @@
         <p class="table-caption">outeach and design coordinator</p>
       </td>
     </tr>
-  </table>
+  </table> -->
 
   <button id="scrollBtn" title="Go to top">
     <i class="arrow up"></i>
@@ -181,7 +198,9 @@
       //change table formatting
       document.getElementById("top-table").style.width = "95vw";
       document.getElementById("top-table").style.marginTop = "3vh";
-      document.getElementById("bottom-table").style.width = "63.4vw";
+      document.getElementById("bottom-table").style.width = "95vw";
+      document.getElementById("bottom-table").style.marginTop = "3vh";
+      //document.getElementById("bottom-table").style.width = "63.4vw";
 
       tableImages = document.querySelectorAll('.table-image');
       for (let i = 0; i < tableImages.length; i++) {
