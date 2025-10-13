@@ -168,10 +168,10 @@
       mslides[currentMslide].style.opacity = 1;
     }
 
+    setInterval(nextSlide, 5000); // change slide every 5 seconds
+
     // ------changes to mobile mode based on the screen width
     if (window.innerWidth <= 700) {
-      setInterval(nextSlide, 5000); // change slide every 5 seconds
-
       //change logo positioning
       document.getElementById("logo").style.padding = "7.5vh 35vw";
 
@@ -188,6 +188,7 @@
       document.getElementById("mslide2").style.display = "block";
       document.getElementById("mslide3").style.display = "block";
       document.getElementById("mslide4").style.display = "block";
+      document.getElementById("mslide5").style.display = "block";
       document.getElementById("mslide-container").style.height = "27vh";
       document.getElementById("mslide-container").style.marginBottom = "3.6%";
       setInterval(showMslide, 5000);
