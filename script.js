@@ -1,4 +1,4 @@
-// ------custom star divider thingy (basically a fancy <br>)
+// ------custom star divider thingy (basically a fancy <hr>)
 class CustomDivider extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `

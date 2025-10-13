@@ -15,6 +15,7 @@
   <link rel="icon" type="image/x-icon" href="img/icon.png">
   <title>ROCKET ROBOTICS</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="outreach.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="img/icon.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, shrink-to-fit=no">
@@ -32,6 +33,44 @@
   <div id="top-buffer"></div>
 
   <h2>OUTREACH EVENTS</h2>
+
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing
+    elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+  <custom-divider></custom-divider>
+
+  <div class="event-container">
+    <div class="image-card">
+      <img src="img/outreach/programmingClass.jpg" alt="Programming Class Image">
+      <!-- IMPORTANT: images used should be in 16x9 -->
+      <p class="caption title">Programming Classes @ Local Libraries</p>
+    </div>
+    <div class="description">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat.
+      </p>
+    </div>
+  </div>
+
+  <div class="event-container">
+    <div class="image-card">
+      <img src="img/outreach/childrensNational.jpg" alt="Children's National Hospital Image">
+      <!-- IMPORTANT: images used should be in 16x9 -->
+      <p class="caption title">Showcase @ Childrens National Hospital</p>
+    </div>
+    <div class="description">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat.
+      </p>
+    </div>
+  </div>
+
+  <div></div>
 
   <button id="scrollBtn" title="Go to top">
     <i class="arrow up"></i>
@@ -51,6 +90,21 @@
     //custom script for this page
     if (window.innerWidth <= 700) {
       document.getElementById("top-buffer").style.marginTop = "17vw";
+    }
+
+    // const eventContainer = document.querySelector(".event-container");
+    // const imageCard = document.getElementById("imageCard");
+
+    // imageCard.addEventListener("click", () => {
+    //   eventContainer.classList.toggle("active");
+    // });
+
+    const eventContainers = document.getElementsByClassName("event-container");
+    const imageCards = document.getElementsByClassName("image-card");
+    for (let i = 0; i < eventContainers.length; i++) {
+      imageCards[i].addEventListener("click", () => {
+        eventContainers[i].classList.toggle("active");
+      });
     }
   </script>
 </body>
