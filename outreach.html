@@ -44,7 +44,7 @@
     <div class="image-card">
       <img src="img/outreach/programmingClass.jpg" alt="Programming Class Image">
       <!-- IMPORTANT: images used should be in 16x9 -->
-      <p class="caption title">Programming Classes @ Local Libraries</p>
+      <p class="caption title"><b>PROGRAMMING CLASSES</b><br>📍Rockville & Potomac Libraries📍</p>
     </div>
     <div class="description">
       <p>
@@ -59,7 +59,7 @@
     <div class="image-card">
       <img src="img/outreach/childrensNational.jpg" alt="Children's National Hospital Image">
       <!-- IMPORTANT: images used should be in 16x9 -->
-      <p class="caption title">Showcase @ Childrens National Hospital</p>
+      <p class="caption title"><b>ROBOT SHOWCASE</b><br>📍Childrens National Hospital📍</p>
     </div>
     <div class="description">
       <p>
@@ -70,7 +70,35 @@
     </div>
   </div>
 
-  <div></div>
+  <div class="event-container">
+    <div class="image-card">
+      <img src="img/outreach/childrensNational.jpg" alt="Children's National Hospital Image">
+      <!-- IMPORTANT: images used should be in 16x9 -->
+      <p class="caption title"><b>ROBOT SHOWCASE</b><br>📍Childrens National Hospital📍</p>
+    </div>
+    <div class="description">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat.
+      </p>
+    </div>
+  </div>
+
+  <div class="event-container">
+    <div class="image-card">
+      <img src="img/outreach/childrensNational.jpg" alt="Children's National Hospital Image">
+      <!-- IMPORTANT: images used should be in 16x9 -->
+      <p class="caption title"><b>ROBOT SHOWCASE</b><br>📍Childrens National Hospital📍</p>
+    </div>
+    <div class="description">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat.
+      </p>
+    </div>
+  </div>
 
   <button id="scrollBtn" title="Go to top">
     <i class="arrow up"></i>
@@ -99,13 +127,37 @@
     //   eventContainer.classList.toggle("active");
     // });
 
-    const eventContainers = document.getElementsByClassName("event-container");
-    const imageCards = document.getElementsByClassName("image-card");
-    for (let i = 0; i < eventContainers.length; i++) {
-      imageCards[i].addEventListener("click", () => {
-        eventContainers[i].classList.toggle("active");
+    // const eventContainers = document.getElementsByClassName("event-container");
+    // const imageCards = document.getElementsByClassName("image-card");
+    // for (let i = 0; i < eventContainers.length; i++) {
+    //   imageCards[i].addEventListener("click", () => {
+    //     eventContainers[i].classList.toggle("active");
+    //   });
+    // }
+
+    // Select all event sections
+    const events = document.querySelectorAll('.event-container');
+    console.log(events)
+
+    // Create an intersection observer
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          // When section comes into view, add the "visible" class
+          entry.target.classList.add('visible');
+          // If you want it to reveal only once:
+          // observer.unobserve(entry.target);
+        } else {
+          // If you want it to disappear when scrolled out:
+          entry.target.classList.remove('visible');
+        }
       });
-    }
+    }, {
+      threshold: 0.4  // triggers when 20% of the section is visible
+    });
+
+    // Observe each event section
+    events.forEach(event => observer.observe(event));
   </script>
 </body>
 
