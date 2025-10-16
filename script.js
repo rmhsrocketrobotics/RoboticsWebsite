@@ -22,6 +22,7 @@ class NavBar extends HTMLElement {
         this.innerHTML = `
 <ul>
     <li><a id="mlogo" class="minilogo" href="index.html">ROCKET ROBOTICS</a></li>
+    <li><a class="nav-bar-item" id="outreach" href="outreach.html">sponsors</a></li>
     <li><a class="nav-bar-item" id="sponsors" href="sponsors.html">sponsors</a></li>
     <li><a class="nav-bar-item" id="contact" href="contact.html">contact</a></li>
     <div id="hamburger" class="hamburger" style="display: none;padding: 1.8vw 5vw;" onclick="toggleMenu()">
