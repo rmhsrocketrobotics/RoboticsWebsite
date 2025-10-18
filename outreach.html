@@ -43,7 +43,7 @@
   <div class="event-container">
     <div class="image-card">
       <img src="img/outreach/programmingClass.jpg" alt="Programming Class Image">
-      <!-- IMPORTANT: images used should be in 16x9 -->
+      <!-- IMPORTANT: images used should be 4x3 -->
       <p class="caption title"><b>PROGRAMMING CLASSES</b><br>📍Rockville & Potomac Libraries📍</p>
     </div>
     <div class="description">
@@ -58,7 +58,7 @@
   <div class="event-container">
     <div class="image-card">
       <img src="img/outreach/childrensNational.jpg" alt="Children's National Hospital Image">
-      <!-- IMPORTANT: images used should be in 16x9 -->
+      <!-- IMPORTANT: images used should be 4x3 -->
       <p class="caption title"><b>ROBOT SHOWCASE</b><br>📍Childrens National Hospital📍</p>
     </div>
     <div class="description">
@@ -73,7 +73,7 @@
   <div class="event-container">
     <div class="image-card">
       <img src="img/outreach/childrensNational.jpg" alt="Children's National Hospital Image">
-      <!-- IMPORTANT: images used should be in 16x9 -->
+      <!-- IMPORTANT: images used should be 4x3 -->
       <p class="caption title"><b>ROBOT SHOWCASE</b><br>📍Childrens National Hospital📍</p>
     </div>
     <div class="description">
@@ -88,7 +88,7 @@
   <div class="event-container">
     <div class="image-card">
       <img src="img/outreach/childrensNational.jpg" alt="Children's National Hospital Image">
-      <!-- IMPORTANT: images used should be in 16x9 -->
+      <!-- IMPORTANT: images used should be 4x3 -->
       <p class="caption title"><b>ROBOT SHOWCASE</b><br>📍Childrens National Hospital📍</p>
     </div>
     <div class="description">
@@ -118,46 +118,69 @@
     //custom script for this page
     if (window.innerWidth <= 700) {
       document.getElementById("top-buffer").style.marginTop = "17vw";
-    }
+      
+      //no cool animations for the mobile page :(
+      //animations for the desktop page alr took so long
 
-    // const eventContainer = document.querySelector(".event-container");
-    // const imageCard = document.getElementById("imageCard");
+      //make the space between images larger
+      const eventContainers = document.querySelectorAll('.event-container');
+      for (let i = 0; i < eventContainers.length; i++) {
+        eventContainers[i].setAttribute("style", "height: auto;");
+      }
 
-    // imageCard.addEventListener("click", () => {
-    //   eventContainer.classList.toggle("active");
-    // });
+      //change image size
+      const imageCards = document.querySelectorAll('.image-card');
+      for (let i = 0; i < imageCards.length; i++) {
+        imageCards[i].setAttribute("style", "position: static; top: 0px; left: 0px; transform: translate(0%, 0%); transition: none;");
+      }
+      
+      //change image size
+      const images = document.querySelectorAll('.image-card img');
+      for (let i = 0; i < images.length; i++) {
+        images[i].setAttribute("style", "width: 90vw;");
+      }
+      
+      //change caption font size
+      const captions = document.querySelectorAll('.image-card .title');
+      for (let i = 0; i < captions.length; i++) {
+        captions[i].setAttribute("style", "font-size: 4vw; transform: translate(0px, -68vw);");
+      }
 
-    // const eventContainers = document.getElementsByClassName("event-container");
-    // const imageCards = document.getElementsByClassName("image-card");
-    // for (let i = 0; i < eventContainers.length; i++) {
-    //   imageCards[i].addEventListener("click", () => {
-    //     eventContainers[i].classList.toggle("active");
-    //   });
-    // }
+      const descriptions = document.querySelectorAll('.description');
+      for (let i = 0; i < descriptions.length; i++) {
+        descriptions[i].setAttribute("style", "top: auto; right: auto; transform: none; position: static; opacity: 1; transition: none; width: 100%");
+      }
 
-    // Select all event sections
-    const events = document.querySelectorAll('.event-container');
-    console.log(events)
+      const descriptionText = document.querySelectorAll('.description p');
+      for (let i = 0; i < descriptionText.length; i++) {
+        descriptionText[i].setAttribute("style", descriptionText[i].getAttribute("style") + "margin-top: 2%;");
+      }
 
-    // Create an intersection observer
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          // When section comes into view, add the "visible" class
-          entry.target.classList.add('visible');
-          // If you want it to reveal only once:
-          // observer.unobserve(entry.target);
-        } else {
-          // If you want it to disappear when scrolled out:
-          entry.target.classList.remove('visible');
-        }
+    } else {
+
+      // Select all event sections
+      const events = document.querySelectorAll('.event-container');
+
+      // Create an intersection observer
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            // When section comes into view, add the "visible" class
+            entry.target.classList.add('visible');
+            // If you want it to reveal only once:
+            // observer.unobserve(entry.target);
+          } else {
+            // If you want it to disappear when scrolled out:
+            entry.target.classList.remove('visible');
+          }
+        });
+      }, {
+        threshold: 0.4  // triggers when 20% of the section is visible
       });
-    }, {
-      threshold: 0.4  // triggers when 20% of the section is visible
-    });
 
-    // Observe each event section
-    events.forEach(event => observer.observe(event));
+      // Observe each event section
+      events.forEach(event => observer.observe(event));
+    }
   </script>
 </body>
 
