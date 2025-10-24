@@ -24,16 +24,16 @@
 }
 
 .image-card .title {
-    padding-left: 5%;
-    padding-right: 5%;
-    padding-top: 3%;
-    padding-bottom: 3%;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 1.5%;
+    padding-bottom: 1.5%;
     width: 80%;
     margin-top: 12px;
-    margin-left: 5%;
-    margin-right: 5%;
+    margin-left: 7%;
+    margin-right: 7%;
     position: absolute;
-    transform: translate(0px, -30vw);
+    transform: translate(0px, -30.25vw);
     background: rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(5px);
     border-radius: 25px;
