@@ -22,7 +22,7 @@ class NavBar extends HTMLElement {
         this.innerHTML = `
 <ul>
     <li><a id="mlogo" class="minilogo" href="index.html">ROCKET ROBOTICS</a></li>
-    <!-- <li><a class="nav-bar-item" id="outreach" href="outreach.html">outreach</a></li> -->
+    <li><a class="nav-bar-item" id="outreach" href="outreach.html">outreach</a></li>
     <li><a class="nav-bar-item" id="sponsors" href="sponsors.html">sponsors</a></li>
     <li><a class="nav-bar-item" id="contact" href="contact.html">contact</a></li>
     <div id="hamburger" class="hamburger" style="display: none;padding: 1.8vw 5vw;" onclick="toggleMenu()">
@@ -49,7 +49,9 @@ class HambugerMenu extends HTMLElement {
 <div class="menu-item"><a id="mlogo"
     style="font-size: 9vw; font-family: 'Epilogue', sans-serif; text-decoration: none; color:black;"
     href="index.html">ROCKET ROBOTICS</a></div>
-
+<div class="menu-item"><a id="outreach" href="outreach.html"
+    style="font-family: 'DM Sans', sans-serif; font-size: 8vw; text-decoration: none; color:black;">outreach</a>
+</div>
 <div class="menu-item"><a id="sponsors" href="sponsors.html"
     style="font-family: 'DM Sans', sans-serif; font-size: 8vw; text-decoration: none; color:black;">sponsors</a>
 </div>

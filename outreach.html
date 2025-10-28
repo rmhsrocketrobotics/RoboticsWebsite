@@ -30,11 +30,33 @@
   <nav-bar></nav-bar>
   <hamburger-menu></hamburger-menu>
 
-  <div id="top-buffer"></div>
+  <div class="bg-image-container">
+    <img alt="Image not found." class="bg-image" src="img/outreach/teamPhoto.JPG">
+  </div>
+
+  <div id="number-container">
+    <div class="big-number">
+      <h2 style="background-color: transparent;">
+        <div class="h2 number" data-target="279"></div>
+      </h2>
+      <p style="color: white; background-color: transparent;">Outreach Hours*</p>
+    </div>
+    <div class="big-number">
+      <h2 style="background-color: transparent;">
+        <div class="number" data-target="714"></div>
+      </h2>
+      <p style="color: white; background-color: transparent;">Students Impacted*</p>
+    </div>
+  </div>
+
+  <p id="top-caption" class="caption" style="padding-top: 0; padding-bottom: 10vh;">*hours are for 2025 only</p>
+
+  <custom-divider id="mobile-custom-divider" style="display: none"></custom-divider>
 
   <h2>OUTREACH EVENTS</h2>
 
-  <p>Rocket Robotics pride ourselves in our outreach events based in serving our community and providing accessibility. Check out just a few of our events below! 👇</p>
+  <p>Rocket Robotics pride ourselves in our outreach events based in serving our community and providing accessibility.
+    Check out just a few of our events below! 👇</p>
 
   <custom-divider></custom-divider>
 
@@ -46,7 +68,9 @@
     </div>
     <div class="description">
       <p>
-        Rocket Robotics has been hosting six-week Java and Python courses at the Rockville Memorial Library and the Potomac Library since December 2024. Our courses are free of charge and open to all young people aged 8-14 who are curious about coding. If you're interested, reach out and see when we'll be at your library! 
+        Rocket Robotics has been hosting six-week Java and Python courses at the Rockville Memorial Library and the
+        Potomac Library since December 2024. Our courses are free of charge and open to all young people aged 8-14 who
+        are curious about coding. If you're interested, reach out and see when we'll be at your library!
       </p>
     </div>
   </div>
@@ -59,7 +83,8 @@
     </div>
     <div class="description">
       <p>
-        On September 23rd of 2025, Rocket Robotics hosted a workshop at Children's National Hospital in Washington D.C. We brought Lego SPIKE Kits to teach basic engineering principles and gave a demo of our robot.
+        On September 23rd of 2025, Rocket Robotics hosted a workshop at Children's National Hospital in Washington D.C.
+        We brought Lego SPIKE Kits to teach basic engineering principles and gave a demo of our robot.
       </p>
     </div>
   </div>
@@ -72,20 +97,66 @@
     </div>
     <div class="description">
       <p>
-        On July 18 of 2025, Rocket Robotics and family were given a tour of NASA's Goddard Space Flight Center by one of our Co-captains who was interning there over the summer. We got the chance to speak with engineers, check out NASA facilities, and even take home pieces of the thermal blanket used during the construction of the James Webb Space Telescope!
+        On July 18 of 2025, Rocket Robotics and family were given a tour of NASA's Goddard Space Flight Center by one of
+        our Co-captains who was interning there over the summer. We got the chance to speak with engineers, check out
+        NASA facilities, and even take home pieces of the thermal blanket used during the construction of the James Webb
+        Space Telescope!
       </p>
     </div>
   </div>
 
   <div class="event-container">
     <div class="image-card">
-      <img src="img/placeholder 4x3.png" alt="placeholder Image">
+      <img src="img/outreach/marchMadness.JPG" alt="marchMadness">
       <!-- IMPORTANT: images used should be 4x3 -->
-      <p class="caption title"><b>FTC MARCH MADNESS</b><br>📍Quince Orchard High School📍</p>
+      <p class="caption title"><b>FTC MARCH MADNESS</b><br>📍Quince Orchard HS📍</p>
     </div>
     <div class="description">
       <p>
-        On March 22nd of 2025, Rocket Robotics participated in FTC March Madness, an unofficial competition hosted by team 25611 Robotechs. It was a great opportunity to engage with other FTC teams as well as the surrounding community!
+        On March 22nd of 2025, Rocket Robotics participated in FTC March Madness, an unofficial competition hosted by
+        team 25611 Robotechs. It was a great opportunity to engage with other FTC teams as well as the surrounding
+        community!
+      </p>
+    </div>
+  </div>
+
+  <div class="event-container">
+    <div class="image-card">
+      <img src="img/outreach/engineerPanel.jpg" alt="engineerPanel">
+      <!-- IMPORTANT: images used should be 4x3 -->
+      <p class="caption title"><b>NASA ENGINEER PANEL</b><br>📍Richard Montgomery HS📍</p>
+    </div>
+    <div class="description">
+      <p>
+        Rocket Robotics held a panel with 4 engineers from NASA to learn what the daily life of a professional engineer
+        looked like. This even was open to anyone who wanted to join!
+      </p>
+    </div>
+  </div>
+
+  <div class="event-container">
+    <div class="image-card">
+      <img src="img/outreach/snowdenFtcFair.JPG" alt="engineerPanel">
+      <!-- IMPORTANT: images used should be 4x3 -->
+      <p class="caption title bottom-title"><b>ROBOTICS FAIR</b><br>📍Snowden Farm ES📍</p>
+    </div>
+    <div class="description">
+      <p>
+        Rocket Robotics participated in an FTC fair at Snowden Farm ES to introduce STEM, robotics, and FIRST to
+        elementary and middle school students.
+    </div>
+  </div>
+
+  <div class="event-container">
+    <div class="image-card">
+      <img src="img/outreach/stemNights.JPG" alt="engineerPanel">
+      <!-- IMPORTANT: images used should be 4x3 -->
+      <p class="caption title bottom-title"><b>STEM NIGHTS</b><br>📍Middle/Elementary Schools📍</p>
+    </div>
+    <div class="description">
+      <p>
+        Rocket Robotics is a frequent presenter at local middle and elementary school STEM nights, and have presented at
+        5 this year! We use these opportunities to inform students about FIRST and get them engaged with STEM!
       </p>
     </div>
   </div>
@@ -107,8 +178,7 @@
   <script>
     //custom script for this page
     if (window.innerWidth <= 700) {
-      document.getElementById("top-buffer").style.marginTop = "17vw";
-      
+
       //no cool animations for the mobile page :(
       //animations for the desktop page alr took so long
 
@@ -123,13 +193,13 @@
       for (let i = 0; i < imageCards.length; i++) {
         imageCards[i].setAttribute("style", "position: static; top: 0px; left: 0px; transform: translate(0%, 0%); transition: none;");
       }
-      
+
       //change image size
       const images = document.querySelectorAll('.image-card img');
       for (let i = 0; i < images.length; i++) {
         images[i].setAttribute("style", "width: 90vw;");
       }
-      
+
       //change caption font size
       const captions = document.querySelectorAll('.image-card .title');
       for (let i = 0; i < captions.length; i++) {
@@ -146,6 +216,22 @@
         descriptionText[i].setAttribute("style", descriptionText[i].getAttribute("style") + "margin-top: 2%;");
       }
 
+      bgImageContainer = document.querySelector('.bg-image-container');
+      bgImageContainer.setAttribute("style", "height: 70vh;");
+
+      numberContainer = document.querySelector('#number-container');
+      numberContainer.setAttribute("style", "transform: translate(0vh, -23vh);");
+
+      mobileCustomDivider = document.querySelector('#mobile-custom-divider');
+      mobileCustomDivider.setAttribute("style", "display: show; padding-top: 20vh; padding-bottom: 20vh");
+
+      const bottomTitle = document.querySelectorAll('.bottom-title');
+      for (let i = 0; i < bottomTitle.length; i++) {
+        bottomTitle[i].setAttribute("style", descriptionText[i].getAttribute("style") + "transform: translate(0px, -20vw) !important;");
+      }
+
+      topCaption = document.querySelector('#top-caption');
+      topCaption.setAttribute("style", topCaption.getAttribute("style") + "padding-top: 5vh");
     } else {
 
       // Select all event sections
@@ -171,6 +257,35 @@
       // Observe each event section
       events.forEach(event => observer.observe(event));
     }
+
+    // number animation code (thank you chatgpt)
+    function animateCount(el, endValue = 100, duration = 4000) {
+      let start = null;
+
+      function update(timestamp) {
+        if (!start) start = timestamp;
+        const progress = Math.min((timestamp - start) / duration, 1);
+
+        // Ease-in-out function
+        const easedProgress = 0.5 - 0.5 * Math.cos(progress * Math.PI);
+        const currentValue = Math.round(easedProgress * endValue);
+
+        el.textContent = currentValue;
+
+        if (progress < 1) {
+          requestAnimationFrame(update);
+        }
+      }
+
+      requestAnimationFrame(update);
+    }
+
+    // Find and animate all counters
+    document.querySelectorAll('.number').forEach(el => {
+      const endValue = parseInt(el.dataset.target) || 100;
+      const duration = parseInt(el.dataset.duration) || 5000;
+      animateCount(el, endValue, duration);
+    });
   </script>
 </body>
 
