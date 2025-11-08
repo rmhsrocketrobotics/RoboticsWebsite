@@ -227,7 +227,7 @@
 
       const bottomTitle = document.querySelectorAll('.bottom-title');
       for (let i = 0; i < bottomTitle.length; i++) {
-        bottomTitle[i].setAttribute("style", descriptionText[i].getAttribute("style") + "transform: translate(0px, -20vw) !important;");
+        bottomTitle[i].setAttribute("style", bottomTitle[i].getAttribute("style") + "transform: translate(0px, -20vw) !important;");
       }
 
       topCaption = document.querySelector('#top-caption');
