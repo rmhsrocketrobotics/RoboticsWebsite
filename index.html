@@ -65,15 +65,17 @@
   <custom-divider></custom-divider>
 
   <h2>LEADERSHIP</h2>
-  <table style="margin-top: 6vh;" id="top-table">
+  <table style="width: 65vw; margin-top: 6vh;" id="top-table">
     <tr>
-      <td><img alt="Image not found." src="img/leadership/brynn.jpg" class="table-image">
-        <h5 class="table-text">BRYNN JOHNSON</h5>
-        <h5 class="table-caption">co-captain</h5>
+      <td style="width: 50%;" class="bottom-table-box"><img alt="Image not found." src="img/leadership/brynn.jpg"
+          class="table-image">
+        <p class="table-text">BRYNN JOHNSON</p>
+        <p class="table-caption">co-captain</p>
       </td>
-      <td><img alt="Image not found." src="img/leadership/kris.jpg" class="table-image">
-        <h5 class="table-text">KRISTIYAN DONCHEV</h5>
-        <h5 class="table-caption">co-captain</h5>
+      <td style="width: 50%;" class="bottom-table-box"><img alt="Image not found." src="img/leadership/kris.jpg"
+          class="table-image">
+        <p class="table-text">KRISTIYAN DONCHEV</p>
+        <p class="table-caption">co-captain</p>
       </td>
     </tr>
   </table>
@@ -95,20 +97,7 @@
     </tr>
   </table>
 
-  <!-- <table style="width: 50vw;" id="bottom-table"> <---- CODE FOR A ROW OF TWO PEOPLE
-    <tr>
-      <td style="width: 50%;" class="bottom-table-box"><img alt="Image not found." src="img/placeholder.png"
-          class="table-image">
-        <p class="table-text">GANESH RAMAMURTHI</p>
-        <p class="table-caption">outeach and design coordinator</p>
-      </td>
-      <td style="width: 50%;" class="bottom-table-box"><img alt="Image not found." src="img/placeholder.png"
-          class="table-image">
-        <p class="table-text">VED SHEWANI</p>
-        <p class="table-caption">outeach and design coordinator</p>
-      </td>
-    </tr>
-  </table> -->
+
 
   <button id="scrollBtn" title="Go to top">
     <i class="arrow up"></i>
@@ -195,8 +184,9 @@
       //change table formatting
       document.getElementById("top-table").style.width = "95vw";
       document.getElementById("top-table").style.marginTop = "3vh";
+      document.getElementById("top-table").style.marginBottom = "0vh";
       document.getElementById("bottom-table").style.width = "95vw";
-      document.getElementById("bottom-table").style.marginTop = "3vh";
+      document.getElementById("bottom-table").style.marginTop = "0vh";
       //document.getElementById("bottom-table").style.width = "63.4vw";
 
       tableImages = document.querySelectorAll('.table-image');
@@ -216,12 +206,12 @@
 
       tableBoxes = document.getElementsByTagName("td");
       for (let i = 0; i < tableBoxes.length; i++) {
-        tableBoxes[i].setAttribute("style", "padding: 0;");
+        tableBoxes[i].setAttribute("style", "padding: 3%;");
       }
 
       bottomTableBoxes = document.querySelectorAll('.bottom-table-box');
       for (let i = 0; i < bottomTableBoxes.length; i++) {
-        bottomTableBoxes[i].setAttribute("style", "padding: 0; width: 50%;");
+        bottomTableBoxes[i].setAttribute("style", "padding: 3%; width: 50%;");
       }
     }
   </script>
