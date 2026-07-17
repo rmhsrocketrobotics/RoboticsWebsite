@@ -25,6 +25,7 @@ class NavBar extends HTMLElement {
     <li><a class="nav-bar-item" id="outreach" href="outreach.html">outreach</a></li>
     <li><a class="nav-bar-item" id="sponsors" href="sponsors.html">sponsors</a></li>
     <li><a class="nav-bar-item" id="contact" href="contact.html">contact</a></li>
+    <li><a class="nav-bar-item" id="donate" href="https://www.gofundme.com/f/support-rocket-robotics-journey-for-accessible-stem" target="_blank">donate</a></li>
     <div id="hamburger" class="hamburger" style="display: none;padding: 1.8vw 5vw;" onclick="toggleMenu()">
     <div id="b1" class="bar"></div>
     <div id="b2" class="bar"></div>
@@ -57,6 +58,9 @@ class HambugerMenu extends HTMLElement {
 </div>
 <div class="menu-item"><a id="contact" href="contact.html"
     style="font-family: 'DM Sans', sans-serif; font-size: 8vw; text-decoration: none; color:black;">contact</a>
+</div>
+<div class="menu-item"><a id="donate" href="https://www.gofundme.com/f/support-rocket-robotics-journey-for-accessible-stem" target="_blank"
+    style="font-family: 'DM Sans', sans-serif; font-size: 8vw; text-decoration: none; color:black;">donate</a>
 </div>
         `;
     }
