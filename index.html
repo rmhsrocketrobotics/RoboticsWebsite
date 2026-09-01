@@ -183,10 +183,11 @@
 
       //change table formatting
       document.getElementById("top-table").style.width = "95vw";
-      document.getElementById("top-table").style.marginTop = "3vh";
+      document.getElementById("top-table").style.marginTop = "0vh";
       document.getElementById("top-table").style.marginBottom = "0vh";
       document.getElementById("bottom-table").style.width = "95vw";
       document.getElementById("bottom-table").style.marginTop = "0vh";
+      document.getElementById("bottom-table").style.marginBottom = "0vh";
       //document.getElementById("bottom-table").style.width = "63.4vw";
 
       tableImages = document.querySelectorAll('.table-image');
@@ -196,7 +197,7 @@
 
       tableText = document.querySelectorAll('.table-text');
       for (let i = 0; i < tableText.length; i++) {
-        tableText[i].setAttribute("style", "font-size: 2.5vw;");
+        tableText[i].setAttribute("style", "font-size: 2.5vw; height: 5vw") ;
       }
 
       tableCaption = document.querySelectorAll('.table-caption');
@@ -211,7 +212,7 @@
 
       bottomTableBoxes = document.querySelectorAll('.bottom-table-box');
       for (let i = 0; i < bottomTableBoxes.length; i++) {
-        bottomTableBoxes[i].setAttribute("style", "padding: 3%; width: 50%;");
+        bottomTableBoxes[i].setAttribute("style", "padding: 12%; width: 50%;");
       }
     }
   </script>
