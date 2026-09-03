@@ -583,6 +583,18 @@ footer {
   margin-right: auto;
   margin-top: 3vh;
   margin-bottom: 3vh;
+  border-color: black;
+  border-width: 4px;
+  border-style: none;
+}
+
+.sponsor-image-row {
+  margin-top: 3vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 #instagram-imbed {
