@@ -119,10 +119,14 @@
 }
 
 .number {
-    font-size: 10vw;
+    font-size: 8vw;
     text-align: center;
     color: white;
     background-color: transparent;
+}
+
+.number-description {
+    margin-top: 0;
 }
 
 .bg-image-container {
